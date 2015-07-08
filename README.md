@@ -1,1 +1,1 @@
-# Whishlist
+# Wishlist
