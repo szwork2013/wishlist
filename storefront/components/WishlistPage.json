@@ -1,0 +1,9 @@
+{
+ "route": {
+   "name": "wishlist_hello",
+   "path": "/wishlist"
+ },
+ "assets": [
+   "wishlist.js"
+ ]
+}
