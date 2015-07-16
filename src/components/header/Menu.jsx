@@ -7,7 +7,7 @@ let Menu = React.createClass({
 
   render() {
     return (
-        <img className="glyphicon glyphicon-menu-hamburger" onClick={this.handleClick}/>
+        <a className="glyphicon glyphicon-menu-hamburger" onClick={this.handleClick}/>
     );
   }
 });
