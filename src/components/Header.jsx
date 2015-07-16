@@ -8,17 +8,15 @@ let Header = React.createClass({
 
   render: function(){
 		return(
-			  <div className="col-md-12 navbar navbar-default">
-			  	<div className="col-md-4 nav">
+			  <nav className="col-md-12 navbar navbar-default">
+			    <div className="container-fluid row">
+			  	  <div className="col-md-4">
 				  		<Menu/>
 				  </div>
-				  <div className="col-md-4 navbar-brand">
-				  		<Brand/>
-				  </div>
-				  <div className="col-md-4 nav-right">
-				  		<Buy/>
-				  </div>
-			  </div>
+				  <Brand/>
+				  <Buy/>
+				</div>
+			  </nav>
 		);
 	}	
 });

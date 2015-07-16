@@ -4,7 +4,7 @@ let Brand = React.createClass({
 
   render() {
     return (
-      <div>
+      <div className="col-md-4 navbar-brand">
         <p>Logo</p>
       </div>
     );

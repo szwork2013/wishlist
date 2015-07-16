@@ -7,7 +7,13 @@ let Buy = React.createClass({
 
   render() {
     return (
-        <button type="button" className="btn btn-success" onClick={this.handleClick}>Comprar lista</button> 
+    	<div className="col-md-4 navbar-form">
+	        <button type="button" 
+	        className="btn btn-success" 
+	        onClick={this.handleClick}>
+	        	Comprar essa lista
+	        </button> 
+	    </div>
     );
   }
 });
