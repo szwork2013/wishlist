@@ -1,4 +1,14 @@
 import storefront from 'storefront';
-import Hello from './components/Hello';
+import React from 'react';
 
-storefront.export('WishlistPage@vtex.wishlist', Hello);
+import Header from './components/Header';
+
+var Page = React.createClass({
+	render: function(){
+		return(
+			  <Header/>
+		);
+	}	
+});
+
+storefront.export('WishlistPage@vtex.wishlist', Page);
