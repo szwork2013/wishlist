@@ -7,7 +7,11 @@ let Menu = React.createClass({
 
   render() {
     return (
-        <a className="glyphicon glyphicon-menu-hamburger" onClick={this.handleClick}/>
+    	<div className="col-md-4 navbar-form">
+        	<button 
+        	className="glyphicon glyphicon-menu-hamburger btn btn-default" 
+        	onClick={this.handleClick}></button>
+        </div>
     );
   }
 });
