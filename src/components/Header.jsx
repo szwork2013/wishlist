@@ -7,18 +7,16 @@ import Buy from './header/Buy';
 let Header = React.createClass({
 
   render: function(){
-		return(
-			  <nav className="col-md-12 navbar navbar-default">
-			    <div className="container-fluid row">
-			  	  <div className="col-md-4">
-				  		<Menu/>
-				  </div>
-				  <Brand/>
-				  <Buy/>
-				</div>
-			  </nav>
-		);
-	}	
+    return (
+      <nav className="col-md-12 navbar navbar-default">
+        <div className="container-fluid row">
+          <Menu/>
+          <Brand/>
+          <Buy/>
+        </div>
+      </nav>
+    );
+  }
 });
 
 export default Header;
