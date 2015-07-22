@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 
 var Page = React.createClass({
   render: function(){
-    return(
+    return (
       <div>
         <Header/>
         <Footer/>
