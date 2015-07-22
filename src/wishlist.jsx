@@ -4,6 +4,7 @@ import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Product from './components/Product';
+import Catalog from './components/Catalog';
 
 var Page = React.createClass({
   render: function(){
@@ -12,6 +13,7 @@ var Page = React.createClass({
         <Header/>
         <Product/>
         <Footer/>
+        <Catalog/>
       </div>
     );
   }
