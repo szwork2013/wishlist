@@ -8,8 +8,8 @@ let Footer = React.createClass({
     return (
       <nav className="col-xs-12 navbar navbar-default">
         <div className="container-fluid row center-block">
-          <Buy/>
           <Send/>
+          <Buy/>
         </div>
       </nav>
     );
