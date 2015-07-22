@@ -1,8 +1,10 @@
 import React from 'react';
+import ProductActions from './ProductActions';
 
 let AddCart = React.createClass({
-  addClick() {
-    console.log('Produto adicionado ao carrinho');
+  addClick(i) {
+    console.log('Você adicionou o produto' + this.+ 'ao carrinho');
+    //ProductActions.AddCart(); //recebe o sku a ser adicionado ao carrinho. Como???
   },
 
   render() {

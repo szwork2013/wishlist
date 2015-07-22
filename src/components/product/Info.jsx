@@ -1,8 +1,9 @@
 import React from 'react';
+import ProductActions from './ProductActions';
 
 let Info = React.createClass({
-  getId: function(sku){
-    return sku.id;
+  getId: function() {
+    var id = this.return this.map(sku, 'id');
   },
   render() {
     return (
