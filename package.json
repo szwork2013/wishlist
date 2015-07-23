@@ -28,6 +28,7 @@
     "postreleasy": "vtex publish"
   },
   "dependencies": {
+    "alt": "^0.17.1",
     "jquery": "^2.1.4",
     "react": "^0.13.3",
     "react-tooltip": "^0.3.4"
