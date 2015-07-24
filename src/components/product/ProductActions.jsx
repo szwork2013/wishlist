@@ -13,10 +13,15 @@ let ProductActions = React.createClass({
 
   //deleta um produto RECEBIDO da wishlist e o torna INVISIVEL
   Delete : function(data) {
+
   },
 
   //adiciona um produto RECEBIDO ao carrinho e o torna VISIVEL
   AddCart : function(data) {
+
+  }
+
+  AddWishlist : function(data) {
 
   }
 });
