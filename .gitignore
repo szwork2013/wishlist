@@ -1,5 +1,3 @@
 node_modules/
 npm-debug.log
-storefront/assets/wishlist.js
-storefront/assets/wishlist.js.map
 storefront/components/WishlistPage.json
