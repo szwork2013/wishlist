@@ -6,16 +6,19 @@ import Footer from './components/Footer';
 import Product from './components/Product';
 import Catalog from './components/Catalog';
 import List from './components/List';
+import CookieController from './components/CookieController';
 
 var Page = React.createClass({
   render: function(){
     return (
       <div>
-        <Header/>
-        <Product/>
-        <Footer/>
-        <Catalog/>
-        <List/>
+        <CookieController>
+          <Header/>
+          <Product/>
+          <Footer/>
+          <Catalog/>
+          <List/>
+        </CookieController>
       </div>
     );
   }
