@@ -1,7 +1,7 @@
 import React from 'react';
 import cookie from 'react-cookie';
-import SkuStore from '../stores/SkuStore';
-import CatalogActions from '../actions/CatalogActions';
+import WishlistStore from '../stores/WishlistStore';
+import WishlistActions from '../actions/WishlistActions';
 
 let CookieController = React.createClass({
 
@@ -9,17 +9,17 @@ let CookieController = React.createClass({
     var wishlist = cookie.load('wishlist');
 
     if ( wishlist !== undefined) {
-      CatalogActions.setInitialState(wishlist.skus);
+      WishlistActions.setInitialState(wishlist.skus);
     }
     return null;
   },
 
   componentDidMount() {
-    SkuStore.listen(this.onChange);
+    WishlistStore.listen(this.onChange);
   },
 
   componentWillUnmount() {
-    SkuStore.listen(this.onChange);
+    WishlistStore.listen(this.onChange);
   },
 
   onChange(state) {

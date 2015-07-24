@@ -1,15 +1,15 @@
 import React from 'react';
-import ProductCat from './catalog/ProductCat';
+import SkuItem from './catalog/SkuItem';
 
 let Catalog = React.createClass({
   getInitialState(){
     return {
-      prod: [
-        {sku: 1, produto: 'Tenis Nike', tipo: 'calçado', preco: 99.0},
-        {sku: 2, produto: 'Camisa Polo', tipo: 'camisa', preco: 80},
-        {sku: 3, produto: 'Casaco Ecko', tipo: 'casaco', preco: 247.90},
-        {sku: 4, produto: 'Tenis Adidas', tipo: 'calçado', preco: 270.0},
-        {sku: 5, produto: 'Tenis Reebok', tipo: 'calçado', preco: 130.0}
+      skus: [
+        {id: 1, description: 'Tenis Nike', category: 'calçado', price: 99.0},
+        {id: 2, description: 'Camisa Polo', category: 'camisa', price: 80},
+        {id: 3, description: 'Casaco Ecko', category: 'casaco', price: 247.90},
+        {id: 4, description: 'Tenis Adidas', category: 'calçado', price: 270.0},
+        {id: 5, description: 'Tenis Reebok', category: 'calçado', price: 130.0}
       ]
     };
   },
@@ -19,8 +19,8 @@ let Catalog = React.createClass({
         <div className="container-fluid row center-block">
         <h1>Catalogo Fake</h1>
           <div className="center">
-            {this.state.prod.map((product) => {
-              return (<ProductCat data={product} key={product.sku}/>);
+            {this.state.skus.map((sku, index) => {
+              return (<SkuItem sku={sku} key={index}/>);
             })}
           </div>
         </div>

@@ -15,9 +15,9 @@ module.exports = {
   entry: hot ? [
     'webpack-dev-server/client?http://0.0.0.0:3000',
     'webpack/hot/only-dev-server',
-    './src/' + pkg.name + '.jsx'
+    './src/WishlistApp.jsx'
   ] : [
-    './src/' + pkg.name + '.jsx'
+    './src/WishlistApp.jsx'
   ],
 
   externals: {
@@ -41,7 +41,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './storefront/assets/'),
     publicPath: publicPath,
-    filename: pkg.name + '.js'
+    filename: 'WishlistApp.js'
   },
 
   eslint: {

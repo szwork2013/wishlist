@@ -1,30 +1,30 @@
 import React from 'react';
 
-import Picture from './product/Picture';
-import Price from './product/Price';
-import AddCart from './product/AddCart';
-import Delete from './product/Delete';
-import Info from './product/Info';
+import Picture from './Picture';
+import Price from './Price';
+import AddCart from './AddCart';
+import Delete from './Delete';
+import Description from './Description';
 
-let Product = React.createClass({
+let WishlistItem = React.createClass({
 
   render: function() {
     return (
       <nav className="col-md-12 navbar navbar-default">
         <div className="container-fluid row">
           <div className="col-xs-4 navbar navbar-default">
-            <Picture/>
+            <Picture sku={this.props.sku}/>
           </div>
           <div className="col-xs-4 navbar navbar-default">
-            <Info/>
+            <Description sku={this.props.sku}/>
           </div>
           <div className="col-xs-4 navbar navbar-deafult">
-            <Price/>
+            <Price sku={this.props.sku}/>
             <div className = "col-xs-6">
-              <Delete/>
+              <Delete sku={this.props.sku}/>
               </div>
               <div className = "col-xs-6">
-              <AddCart/>
+              <AddCart sku={this.props.sku}/>
             </div>
           </div>
         </div>
@@ -33,4 +33,4 @@ let Product = React.createClass({
   }
 });
 
-export default Product;
+export default WishlistItem;
