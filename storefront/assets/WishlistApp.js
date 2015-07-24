@@ -2333,16 +2333,16 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _catalogProductCat = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./catalog/ProductCat\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _catalogSkuItem = __webpack_require__(34);
 	
-	var _catalogProductCat2 = _interopRequireDefault(_catalogProductCat);
+	var _catalogSkuItem2 = _interopRequireDefault(_catalogSkuItem);
 	
 	var Catalog = _react2['default'].createClass({
 	  displayName: 'Catalog',
 	
 	  getInitialState: function getInitialState() {
 	    return {
-	      prod: [{ sku: 1, produto: 'Tenis Nike', tipo: 'calçado', preco: 99.0 }, { sku: 2, produto: 'Camisa Polo', tipo: 'camisa', preco: 80 }, { sku: 3, produto: 'Casaco Ecko', tipo: 'casaco', preco: 247.90 }, { sku: 4, produto: 'Tenis Adidas', tipo: 'calçado', preco: 270.0 }, { sku: 5, produto: 'Tenis Reebok', tipo: 'calçado', preco: 130.0 }]
+	      skus: [{ id: 1, description: 'Tenis Nike', category: 'calçado', price: 99.0 }, { id: 2, description: 'Camisa Polo', category: 'camisa', price: 80 }, { id: 3, description: 'Casaco Ecko', category: 'casaco', price: 247.90 }, { id: 4, description: 'Tenis Adidas', category: 'calçado', price: 270.0 }, { id: 5, description: 'Tenis Reebok', category: 'calçado', price: 130.0 }]
 	    };
 	  },
 	  render: function render() {
@@ -2360,8 +2360,8 @@
 	        _react2['default'].createElement(
 	          'div',
 	          { className: "center" },
-	          this.state.prod.map(function (product) {
-	            return _react2['default'].createElement(_catalogProductCat2['default'], { data: product, key: product.sku });
+	          this.state.skus.map(function (sku, index) {
+	            return _react2['default'].createElement(_catalogSkuItem2['default'], { sku: sku, key: index });
 	          })
 	        )
 	      )
@@ -2370,6 +2370,64 @@
 	});
 	
 	exports['default'] = Catalog;
+	module.exports = exports['default'];
+
+/***/ },
+/* 34 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _react = __webpack_require__(3);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _actionsWishlistActions = __webpack_require__(26);
+	
+	var _actionsWishlistActions2 = _interopRequireDefault(_actionsWishlistActions);
+	
+	var SkuItem = _react2['default'].createClass({
+	  displayName: 'SkuItem',
+	
+	  addSkuToWishlist: function addSkuToWishlist() {
+	    _actionsWishlistActions2['default'].addSku(this.props.sku);
+	  },
+	
+	  render: function render() {
+	    return _react2['default'].createElement(
+	      'div',
+	      { className: "col-xs-1 navbar-form" },
+	      _react2['default'].createElement(
+	        'p',
+	        null,
+	        this.props.sku.description
+	      ),
+	      _react2['default'].createElement(
+	        'p',
+	        null,
+	        'Categoria: ',
+	        this.props.sku.category
+	      ),
+	      _react2['default'].createElement(
+	        'p',
+	        null,
+	        'R$ ',
+	        this.props.sku.price
+	      ),
+	      _react2['default'].createElement('button', {
+	        className: "glyphicon glyphicon-heart btn btn-default",
+	        onClick: this.addSkuToWishlist })
+	    );
+	  }
+	});
+	
+	exports['default'] = SkuItem;
 	module.exports = exports['default'];
 
 /***/ }
