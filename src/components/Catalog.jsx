@@ -9,9 +9,7 @@ let Catalog = React.createClass({
         {sku: 2, produto: 'Camisa Polo', tipo: 'camisa', preco: 80},
         {sku: 3, produto: 'Casaco Ecko', tipo: 'casaco', preco: 247.90},
         {sku: 4, produto: 'Tenis Adidas', tipo: 'calçado', preco: 270.0},
-        {sku: 5, produto: 'Tenis Reebok', tipo: 'calçado', preco: 130.0},
-        {sku: 6, produto: 'Camisa Taco', tipo: 'camisa', preco: 14.0},
-        {sku: 7, produto: 'Tenis Armani', tipo: 'camisa', preco: 300}
+        {sku: 5, produto: 'Tenis Reebok', tipo: 'calçado', preco: 130.0}
       ]
     };
   },

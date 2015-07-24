@@ -11,7 +11,9 @@ class SkuStore {
     });
   }
   handleAddSku(sku) {
-    this.skus.push(sku); //coloca sku no final da array de skus
+    if(this.skus.indexOf(sku) < 0) {
+      this.skus.push(sku); //coloca sku no final da array de skus
+    }
   }
 }
 
