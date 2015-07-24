@@ -1,25 +1,16 @@
 import React from 'react';
-import flux from '../../flux';
-//import CatalogActions from 'CatalogActions';
 
 let ProductCat = React.createClass({
   handleClick() {
-    console.log('adiciona na wishlist');
-
-    //var sku = this.props.selected.sku;
-    //var update = {
-    //  name: this.props.product.name,
-    //  type: this.props.selected.type,
-    //  price: this.props.selected.price
-    //};
-
+    let {sku} = this.props.data;
+    console.log('adiciona ' + sku + ' na wishlist');
   },
 
   render() {
     return (
-      <div className="col-xs-4 navbar-form">
-        <p>produto</p>
-        <button
+      <div className="col-xs-1 navbar-form">
+        <p>{this.props.data.produto}</p>
+        <button id="bot"
         className="glyphicon glyphicon-heart btn btn-default"
         onClick={this.handleClick}></button>
       </div>
