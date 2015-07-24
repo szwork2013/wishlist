@@ -1,4 +1,3 @@
-import React from 'react';
 import flux from '../../flux';
 
 class CatalogActions {

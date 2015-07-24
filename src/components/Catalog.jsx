@@ -5,13 +5,13 @@ let Catalog = React.createClass({
   getInitialState(){
     return {
       prod: [
-        {sku: 1, produto: 'tenis nike', tipo: 'calçado', preco: 99.0},
-        {sku: 2, produto: 'camisa polo', tipo: 'camisa', preco: 80},
-        {sku: 3, produto: 'casaco ecko', tipo: 'casaco', preco: 247.90},
-        {sku: 4, produto: 'tenis adidas', tipo: 'calçado', preco: 270.0},
-        {sku: 5, produto: 'tenis reebok', tipo: 'calçado', preco: 130.0},
-        {sku: 6, produto: 'camisa taco', tipo: 'camisa', preco: 14.0},
-        {sku: 7, produto: 'tenis armani', tipo: 'camisa', preco: 300}
+        {sku: 1, produto: 'Tenis Nike', tipo: 'calçado', preco: 99.0},
+        {sku: 2, produto: 'Camisa Polo', tipo: 'camisa', preco: 80},
+        {sku: 3, produto: 'Casaco Ecko', tipo: 'casaco', preco: 247.90},
+        {sku: 4, produto: 'Tenis Adidas', tipo: 'calçado', preco: 270.0},
+        {sku: 5, produto: 'Tenis Reebok', tipo: 'calçado', preco: 130.0},
+        {sku: 6, produto: 'Camisa Taco', tipo: 'camisa', preco: 14.0},
+        {sku: 7, produto: 'Tenis Armani', tipo: 'camisa', preco: 300}
       ]
     };
   },
