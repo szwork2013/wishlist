@@ -55,36 +55,40 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _storefront = __webpack_require__(6);
+	var _storefront = __webpack_require__(9);
 	
 	var _storefront2 = _interopRequireDefault(_storefront);
 	
-	var _react = __webpack_require__(3);
+	var _react = __webpack_require__(4);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _componentsHeader = __webpack_require__(7);
+	var _componentsHeader = __webpack_require__(10);
 	
 	var _componentsHeader2 = _interopRequireDefault(_componentsHeader);
 	
-	var _componentsFooter = __webpack_require__(2);
+	var _componentsFooter = __webpack_require__(14);
 	
 	var _componentsFooter2 = _interopRequireDefault(_componentsFooter);
 	
-	var _componentsWishlist = __webpack_require__(11);
+	var _componentsProduct = __webpack_require__(2);
 	
-	var _componentsWishlist2 = _interopRequireDefault(_componentsWishlist);
+	var _componentsProduct2 = _interopRequireDefault(_componentsProduct);
 	
-	var _componentsCatalog = __webpack_require__(37);
+	var _componentsCatalog = __webpack_require__(17);
 	
 	var _componentsCatalog2 = _interopRequireDefault(_componentsCatalog);
 	
-	var _componentsCookieController = __webpack_require__(39);
+	var _componentsList = __webpack_require__(33);
+	
+	var _componentsList2 = _interopRequireDefault(_componentsList);
+	
+	var _componentsCookieController = __webpack_require__(35);
 	
 	var _componentsCookieController2 = _interopRequireDefault(_componentsCookieController);
 	
-	var WishlistApp = _react2['default'].createClass({
-	  displayName: 'WishlistApp',
+	var Page = _react2['default'].createClass({
+	  displayName: 'Page',
 	
 	  render: function render() {
 	    return _react2['default'].createElement(
@@ -94,15 +98,16 @@
 	        _componentsCookieController2['default'],
 	        null,
 	        _react2['default'].createElement(_componentsHeader2['default'], null),
-	        _react2['default'].createElement(_componentsWishlist2['default'], null),
+	        _react2['default'].createElement(_componentsProduct2['default'], null),
 	        _react2['default'].createElement(_componentsFooter2['default'], null),
-	        _react2['default'].createElement(_componentsCatalog2['default'], null)
+	        _react2['default'].createElement(_componentsCatalog2['default'], null),
+	        _react2['default'].createElement(_componentsList2['default'], null)
 	      )
 	    );
 	  }
 	});
 	
-	_storefront2['default']['export']('WishlistPage@vtex.wishlist', WishlistApp);
+	_storefront2['default']['export']('WishlistPage@vtex.wishlist', Page);
 
 /***/ },
 /* 2 */
@@ -116,46 +121,75 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(3);
+	var _react = __webpack_require__(4);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _footerBuy = __webpack_require__(4);
+	var _productPicture = __webpack_require__(5);
 	
-	var _footerBuy2 = _interopRequireDefault(_footerBuy);
+	var _productPicture2 = _interopRequireDefault(_productPicture);
 	
-	var _footerSend = __webpack_require__(5);
+	var _productPrice = __webpack_require__(6);
 	
-	var _footerSend2 = _interopRequireDefault(_footerSend);
+	var _productPrice2 = _interopRequireDefault(_productPrice);
 	
-	var Footer = _react2['default'].createClass({
-	  displayName: 'Footer',
+	var _productAddCart = __webpack_require__(3);
+	
+	var _productAddCart2 = _interopRequireDefault(_productAddCart);
+	
+	var _productDelete = __webpack_require__(7);
+	
+	var _productDelete2 = _interopRequireDefault(_productDelete);
+	
+	var _productInfo = __webpack_require__(8);
+	
+	var _productInfo2 = _interopRequireDefault(_productInfo);
+	
+	var Product = _react2['default'].createClass({
+	  displayName: 'Product',
 	
 	  render: function render() {
 	    return _react2['default'].createElement(
 	      'nav',
-	      { className: 'col-xs-12 navbar navbar-default' },
+	      { className: 'col-md-12 navbar navbar-default' },
 	      _react2['default'].createElement(
 	        'div',
-	        { className: 'container-fluid row center-block' },
-	        _react2['default'].createElement(_footerSend2['default'], null),
-	        _react2['default'].createElement(_footerBuy2['default'], null)
+	        { className: 'container-fluid row' },
+	        _react2['default'].createElement(
+	          'div',
+	          { className: 'col-xs-4 navbar navbar-default' },
+	          _react2['default'].createElement(_productPicture2['default'], null)
+	        ),
+	        _react2['default'].createElement(
+	          'div',
+	          { className: 'col-xs-4 navbar navbar-default' },
+	          _react2['default'].createElement(_productInfo2['default'], null)
+	        ),
+	        _react2['default'].createElement(
+	          'div',
+	          { className: 'col-xs-4 navbar navbar-deafult' },
+	          _react2['default'].createElement(_productPrice2['default'], null),
+	          _react2['default'].createElement(
+	            'div',
+	            { className: 'col-xs-6' },
+	            _react2['default'].createElement(_productDelete2['default'], null)
+	          ),
+	          _react2['default'].createElement(
+	            'div',
+	            { className: 'col-xs-6' },
+	            _react2['default'].createElement(_productAddCart2['default'], null)
+	          )
+	        )
 	      )
 	    );
 	  }
 	});
 	
-	exports['default'] = Footer;
+	exports['default'] = Product;
 	module.exports = exports['default'];
 
 /***/ },
 /* 3 */
-/***/ function(module, exports) {
-
-	module.exports = React;
-
-/***/ },
-/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -166,7 +200,328 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(3);
+	var _react = __webpack_require__(4);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var AddCart = _react2['default'].createClass({
+	  displayName: 'AddCart',
+	
+	  delClick: function delClick() {
+	    console.log('Produto add');
+	  },
+	
+	  render: function render() {
+	    return _react2['default'].createElement(
+	      'div',
+	      { className: 'col-xs-4 navbar-form navbar-right row container-fluid' },
+	      _react2['default'].createElement(
+	        'button',
+	        { type: 'button',
+	          className: 'btn btn-success',
+	          onClick: this.handleClick },
+	        'AddCart'
+	      )
+	    );
+	  }
+	});
+	
+	exports['default'] = AddCart;
+	module.exports = exports['default'];
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	module.exports = React;
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _react = __webpack_require__(4);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var Picture = _react2["default"].createClass({
+	  displayName: "Picture",
+	
+	  render: function render() {
+	    return _react2["default"].createElement(
+	      "div",
+	      { className: "col-xs-4 navbar-form navbar-right row container-fluid" },
+	      _react2["default"].createElement(
+	        "button",
+	        { type: "button",
+	          className: "btn btn-success",
+	          onClick: this.handleClick },
+	        "Pic"
+	      )
+	    );
+	  }
+	});
+	
+	exports["default"] = Picture;
+	module.exports = exports["default"];
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _react = __webpack_require__(4);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var Price = _react2["default"].createClass({
+	  displayName: "Price",
+	
+	  render: function render() {
+	    return _react2["default"].createElement(
+	      "div",
+	      { className: "col-xs-4 " },
+	      _react2["default"].createElement(
+	        "p",
+	        { className: "text-center navbar-brand" },
+	        "Price"
+	      )
+	    );
+	  }
+	});
+	exports["default"] = Price;
+	module.exports = exports["default"];
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _react = __webpack_require__(4);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var Delete = _react2['default'].createClass({
+	  displayName: 'Delete',
+	
+	  delClick: function delClick() {
+	    console.log('Produto excluido');
+	  },
+	
+	  render: function render() {
+	    return _react2['default'].createElement(
+	      'div',
+	      { className: 'col-xs-4 navbar-form navbar-right row container-fluid' },
+	      _react2['default'].createElement(
+	        'button',
+	        { type: 'button',
+	          className: 'btn btn-success',
+	          onClick: this.handleClick },
+	        'X'
+	      )
+	    );
+	  }
+	});
+	
+	exports['default'] = Delete;
+	module.exports = exports['default'];
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _react = __webpack_require__(4);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var Info = _react2["default"].createClass({
+	  displayName: "Info",
+	
+	  render: function render() {
+	    return _react2["default"].createElement(
+	      "div",
+	      { className: "col-xs-4 " },
+	      _react2["default"].createElement(
+	        "p",
+	        { className: "text-center navbar-brand" },
+	        "Info"
+	      )
+	    );
+	  }
+	});
+	
+	exports["default"] = Info;
+	module.exports = exports["default"];
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	module.exports = storefront;
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _react = __webpack_require__(4);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _headerMenu = __webpack_require__(11);
+	
+	var _headerMenu2 = _interopRequireDefault(_headerMenu);
+	
+	var _headerBrand = __webpack_require__(12);
+	
+	var _headerBrand2 = _interopRequireDefault(_headerBrand);
+	
+	var _headerBuy = __webpack_require__(13);
+	
+	var _headerBuy2 = _interopRequireDefault(_headerBuy);
+	
+	var Header = _react2['default'].createClass({
+	  displayName: 'Header',
+	
+	  render: function render() {
+	    return _react2['default'].createElement(
+	      'nav',
+	      { className: 'col-md-12 navbar navbar-default' },
+	      _react2['default'].createElement(
+	        'div',
+	        { className: 'container-fluid row' },
+	        _react2['default'].createElement(_headerMenu2['default'], null),
+	        _react2['default'].createElement(_headerBrand2['default'], null),
+	        _react2['default'].createElement(_headerBuy2['default'], null)
+	      )
+	    );
+	  }
+	});
+	
+	exports['default'] = Header;
+	module.exports = exports['default'];
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _react = __webpack_require__(4);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var Menu = _react2['default'].createClass({
+	  displayName: 'Menu',
+	
+	  handleClick: function handleClick() {
+	    console.log('não tem menu ainda');
+	  },
+	
+	  render: function render() {
+	    return _react2['default'].createElement(
+	      'div',
+	      { className: 'col-xs-4 navbar-form row container-fluid' },
+	      _react2['default'].createElement('button', {
+	        className: 'glyphicon glyphicon-menu-hamburger btn btn-default',
+	        onClick: this.handleClick })
+	    );
+	  }
+	});
+	
+	exports['default'] = Menu;
+	module.exports = exports['default'];
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	var _react = __webpack_require__(4);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var Brand = _react2["default"].createClass({
+	  displayName: "Brand",
+	
+	  render: function render() {
+	    return _react2["default"].createElement(
+	      "div",
+	      { className: "col-xs-4 " },
+	      _react2["default"].createElement(
+	        "p",
+	        { className: "text-center navbar-brand" },
+	        "Logo"
+	      )
+	    );
+	  }
+	});
+	
+	exports["default"] = Brand;
+	module.exports = exports["default"];
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _react = __webpack_require__(4);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -196,7 +551,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 5 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -207,7 +562,92 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(3);
+	var _react = __webpack_require__(4);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _footerBuy = __webpack_require__(15);
+	
+	var _footerBuy2 = _interopRequireDefault(_footerBuy);
+	
+	var _footerSend = __webpack_require__(16);
+	
+	var _footerSend2 = _interopRequireDefault(_footerSend);
+	
+	var Footer = _react2['default'].createClass({
+	  displayName: 'Footer',
+	
+	  render: function render() {
+	    return _react2['default'].createElement(
+	      'nav',
+	      { className: 'col-xs-12 navbar navbar-default' },
+	      _react2['default'].createElement(
+	        'div',
+	        { className: 'container-fluid row center-block' },
+	        _react2['default'].createElement(_footerSend2['default'], null),
+	        _react2['default'].createElement(_footerBuy2['default'], null)
+	      )
+	    );
+	  }
+	});
+	
+	exports['default'] = Footer;
+	module.exports = exports['default'];
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _react = __webpack_require__(4);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var Buy = _react2['default'].createClass({
+	  displayName: 'Buy',
+	
+	  handleClick: function handleClick() {
+	    console.log('vai compra nada não');
+	  },
+	
+	  render: function render() {
+	    return _react2['default'].createElement(
+	      'div',
+	      { className: 'col-xs-4 navbar-form navbar-right row container-fluid' },
+	      _react2['default'].createElement(
+	        'button',
+	        { type: 'button',
+	          className: 'btn btn-success',
+	          onClick: this.handleClick },
+	        'Comprar essa lista'
+	      )
+	    );
+	  }
+	});
+	
+	exports['default'] = Buy;
+	module.exports = exports['default'];
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _react = __webpack_require__(4);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
@@ -237,13 +677,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 6 */
-/***/ function(module, exports) {
-
-	module.exports = storefront;
-
-/***/ },
-/* 7 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -254,45 +688,51 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(3);
+	var _react = __webpack_require__(4);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _headerMenu = __webpack_require__(8);
+	var _catalogProductCat = __webpack_require__(18);
 	
-	var _headerMenu2 = _interopRequireDefault(_headerMenu);
+	var _catalogProductCat2 = _interopRequireDefault(_catalogProductCat);
 	
-	var _headerBrand = __webpack_require__(9);
+	var Catalog = _react2['default'].createClass({
+	  displayName: 'Catalog',
 	
-	var _headerBrand2 = _interopRequireDefault(_headerBrand);
-	
-	var _headerBuy = __webpack_require__(10);
-	
-	var _headerBuy2 = _interopRequireDefault(_headerBuy);
-	
-	var Header = _react2['default'].createClass({
-	  displayName: 'Header',
-	
+	  getInitialState: function getInitialState() {
+	    return {
+	      prod: [{ sku: 1, produto: 'Tenis Nike', tipo: 'calçado', preco: 99.0 }, { sku: 2, produto: 'Camisa Polo', tipo: 'camisa', preco: 80 }, { sku: 3, produto: 'Casaco Ecko', tipo: 'casaco', preco: 247.90 }, { sku: 4, produto: 'Tenis Adidas', tipo: 'calçado', preco: 270.0 }, { sku: 5, produto: 'Tenis Reebok', tipo: 'calçado', preco: 130.0 }]
+	    };
+	  },
 	  render: function render() {
 	    return _react2['default'].createElement(
 	      'nav',
-	      { className: 'col-md-12 navbar navbar-default' },
+	      { className: 'col-xs-12 navbar navbar-default' },
 	      _react2['default'].createElement(
 	        'div',
-	        { className: 'container-fluid row' },
-	        _react2['default'].createElement(_headerMenu2['default'], null),
-	        _react2['default'].createElement(_headerBrand2['default'], null),
-	        _react2['default'].createElement(_headerBuy2['default'], null)
+	        { className: 'container-fluid row center-block' },
+	        _react2['default'].createElement(
+	          'h1',
+	          null,
+	          'Catalogo Fake'
+	        ),
+	        _react2['default'].createElement(
+	          'div',
+	          { className: 'center' },
+	          this.state.prod.map(function (product) {
+	            return _react2['default'].createElement(_catalogProductCat2['default'], { data: product, key: product.sku });
+	          })
+	        )
 	      )
 	    );
 	  }
 	});
 	
-	exports['default'] = Header;
+	exports['default'] = Catalog;
 	module.exports = exports['default'];
 
 /***/ },
-/* 8 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -303,173 +743,56 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(3);
+	var _react = __webpack_require__(4);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var Menu = _react2['default'].createClass({
-	  displayName: 'Menu',
+	var _actionsCatalogActions = __webpack_require__(19);
+	
+	var _actionsCatalogActions2 = _interopRequireDefault(_actionsCatalogActions);
+	
+	var ProductCat = _react2['default'].createClass({
+	  displayName: 'ProductCat',
 	
 	  handleClick: function handleClick() {
-	    console.log('não tem menu ainda');
+	    var sku = this.props.data.sku;
+	
+	    _actionsCatalogActions2['default'].addSku(sku);
 	  },
 	
 	  render: function render() {
 	    return _react2['default'].createElement(
 	      'div',
-	      { className: 'col-xs-4 navbar-form row container-fluid' },
-	      _react2['default'].createElement('button', {
-	        className: 'glyphicon glyphicon-menu-hamburger btn btn-default',
+	      { className: 'col-xs-1 navbar-form' },
+	      _react2['default'].createElement(
+	        'p',
+	        null,
+	        this.props.data.produto
+	      ),
+	      _react2['default'].createElement(
+	        'p',
+	        null,
+	        'Categoria: ',
+	        this.props.data.tipo
+	      ),
+	      _react2['default'].createElement(
+	        'p',
+	        null,
+	        'R$ ',
+	        this.props.data.preco
+	      ),
+	      _react2['default'].createElement('button', { id: 'bot',
+	        className: 'glyphicon glyphicon-heart btn btn-default',
 	        onClick: this.handleClick })
 	    );
 	  }
 	});
 	
-	exports['default'] = Menu;
+	exports['default'] = ProductCat;
 	module.exports = exports['default'];
 
 /***/ },
-/* 9 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _react = __webpack_require__(3);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var Brand = _react2["default"].createClass({
-	  displayName: "Brand",
-	
-	  render: function render() {
-	    return _react2["default"].createElement(
-	      "div",
-	      { className: "col-xs-4 " },
-	      _react2["default"].createElement(
-	        "p",
-	        { className: "text-center navbar-brand" },
-	        "Logo"
-	      )
-	    );
-	  }
-	});
-	
-	exports["default"] = Brand;
-	module.exports = exports["default"];
-
-/***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _react = __webpack_require__(3);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var Buy = _react2['default'].createClass({
-	  displayName: 'Buy',
-	
-	  handleClick: function handleClick() {
-	    console.log('vai compra nada não');
-	  },
-	
-	  render: function render() {
-	    return _react2['default'].createElement(
-	      'div',
-	      { className: 'col-xs-4 navbar-form navbar-right row container-fluid' },
-	      _react2['default'].createElement(
-	        'button',
-	        { type: 'button',
-	          className: 'btn btn-success',
-	          onClick: this.handleClick },
-	        'Comprar essa lista'
-	      )
-	    );
-	  }
-	});
-	
-	exports['default'] = Buy;
-	module.exports = exports['default'];
-
-/***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _react = __webpack_require__(3);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _storesWishlistStore = __webpack_require__(12);
-	
-	var _storesWishlistStore2 = _interopRequireDefault(_storesWishlistStore);
-	
-	var _componentsWishlistItemWishlistItem = __webpack_require__(27);
-	
-	var _componentsWishlistItemWishlistItem2 = _interopRequireDefault(_componentsWishlistItemWishlistItem);
-	
-	var Wishlist = _react2['default'].createClass({
-	  displayName: 'Wishlist',
-	
-	  getInitialState: function getInitialState() {
-	    return {
-	      skuList: _storesWishlistStore2['default'].getState().skus
-	    };
-	  },
-	
-	  componentDidMount: function componentDidMount() {
-	    _storesWishlistStore2['default'].listen(this.onChange);
-	  },
-	
-	  componentWillUnmount: function componentWillUnmount() {
-	    _storesWishlistStore2['default'].listen(this.onChange);
-	  },
-	
-	  onChange: function onChange(state) {
-	    this.setState({ skuList: state.skus });
-	  },
-	
-	  render: function render() {
-	    console.log(this.state.skuList);
-	
-	    return _react2['default'].createElement(
-	      'ul',
-	      null,
-	      this.state.skuList.map(function (sku, index) {
-	        return _react2['default'].createElement(
-	          'li',
-	          { key: index },
-	          _react2['default'].createElement(_componentsWishlistItemWishlistItem2['default'], { sku: sku })
-	        );
-	      })
-	    );
-	  }
-	});
-	exports['default'] = Wishlist;
-	module.exports = exports['default'];
-
-/***/ },
-/* 12 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -484,49 +807,35 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	var _flux = __webpack_require__(13);
+	var _flux = __webpack_require__(20);
 	
 	var _flux2 = _interopRequireDefault(_flux);
 	
-	var _actionsWishlistActions = __webpack_require__(26);
-	
-	var _actionsWishlistActions2 = _interopRequireDefault(_actionsWishlistActions);
-	
-	var WishlistStore = (function () {
-	  function WishlistStore() {
-	    _classCallCheck(this, WishlistStore);
-	
-	    //guarda os sku
-	    this.skus = [];
-	
-	    this.bindListeners({
-	      handleAddSku: _actionsWishlistActions2['default'].ADD_SKU,
-	      handleAddList: _actionsWishlistActions2['default'].ADD_LIST
-	    });
+	var CatalogActions = (function () {
+	  function CatalogActions() {
+	    _classCallCheck(this, CatalogActions);
 	  }
 	
-	  _createClass(WishlistStore, [{
-	    key: 'handleAddSku',
-	    value: function handleAddSku(sku) {
-	      if (this.skus.indexOf(sku) < 0) {
-	        this.skus.push(sku);
-	      }
+	  _createClass(CatalogActions, [{
+	    key: 'addSku',
+	    value: function addSku(sku) {
+	      this.dispatch(sku);
 	    }
 	  }, {
-	    key: 'handleAddList',
-	    value: function handleAddList(list) {
-	      this.skus = list;
+	    key: 'setInitialState',
+	    value: function setInitialState(skus) {
+	      this.dispatch(skus);
 	    }
 	  }]);
 	
-	  return WishlistStore;
+	  return CatalogActions;
 	})();
 	
-	exports['default'] = _flux2['default'].createStore(WishlistStore, 'WishlistStore');
+	exports['default'] = _flux2['default'].createActions(CatalogActions);
 	module.exports = exports['default'];
 
 /***/ },
-/* 13 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -537,7 +846,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _alt = __webpack_require__(14);
+	var _alt = __webpack_require__(21);
 	
 	var _alt2 = _interopRequireDefault(_alt);
 	
@@ -547,7 +856,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 14 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*global window*/
@@ -572,25 +881,25 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	var _flux = __webpack_require__(21);
+	var _flux = __webpack_require__(28);
 	
-	var _utilsStateFunctions = __webpack_require__(24);
+	var _utilsStateFunctions = __webpack_require__(31);
 	
 	var StateFunctions = _interopRequireWildcard(_utilsStateFunctions);
 	
-	var _utilsFunctions = __webpack_require__(17);
+	var _utilsFunctions = __webpack_require__(24);
 	
 	var fn = _interopRequireWildcard(_utilsFunctions);
 	
-	var _store = __webpack_require__(15);
+	var _store = __webpack_require__(22);
 	
 	var store = _interopRequireWildcard(_store);
 	
-	var _utilsAltUtils = __webpack_require__(16);
+	var _utilsAltUtils = __webpack_require__(23);
 	
 	var utils = _interopRequireWildcard(_utilsAltUtils);
 	
-	var _actions = __webpack_require__(25);
+	var _actions = __webpack_require__(32);
 	
 	var _actions2 = _interopRequireDefault(_actions);
 	
@@ -871,7 +1180,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 15 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -896,19 +1205,19 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
 	
-	var _utilsAltUtils = __webpack_require__(16);
+	var _utilsAltUtils = __webpack_require__(23);
 	
 	var utils = _interopRequireWildcard(_utilsAltUtils);
 	
-	var _utilsFunctions = __webpack_require__(17);
+	var _utilsFunctions = __webpack_require__(24);
 	
 	var fn = _interopRequireWildcard(_utilsFunctions);
 	
-	var _AltStore = __webpack_require__(18);
+	var _AltStore = __webpack_require__(25);
 	
 	var _AltStore2 = _interopRequireDefault(_AltStore);
 	
-	var _StoreMixin = __webpack_require__(20);
+	var _StoreMixin = __webpack_require__(27);
 	
 	var _StoreMixin2 = _interopRequireDefault(_StoreMixin);
 	
@@ -1044,7 +1353,7 @@
 	}
 
 /***/ },
-/* 16 */
+/* 23 */
 /***/ function(module, exports) {
 
 	/*eslint-disable*/
@@ -1109,7 +1418,7 @@
 	function NoopClass() {}
 
 /***/ },
-/* 17 */
+/* 24 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1150,7 +1459,7 @@
 	}
 
 /***/ },
-/* 18 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1167,11 +1476,11 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	var _utilsFunctions = __webpack_require__(17);
+	var _utilsFunctions = __webpack_require__(24);
 	
 	var fn = _interopRequireWildcard(_utilsFunctions);
 	
-	var _transmitter = __webpack_require__(19);
+	var _transmitter = __webpack_require__(26);
 	
 	var _transmitter2 = _interopRequireDefault(_transmitter);
 	
@@ -1286,7 +1595,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 19 */
+/* 26 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1319,7 +1628,7 @@
 	module.exports = transmitter;
 
 /***/ },
-/* 20 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1332,11 +1641,11 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _transmitter = __webpack_require__(19);
+	var _transmitter = __webpack_require__(26);
 	
 	var _transmitter2 = _interopRequireDefault(_transmitter);
 	
-	var _utilsFunctions = __webpack_require__(17);
+	var _utilsFunctions = __webpack_require__(24);
 	
 	var fn = _interopRequireWildcard(_utilsFunctions);
 	
@@ -1525,7 +1834,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 21 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1537,11 +1846,11 @@
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 */
 	
-	module.exports.Dispatcher = __webpack_require__(22)
+	module.exports.Dispatcher = __webpack_require__(29)
 
 
 /***/ },
-/* 22 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -1558,7 +1867,7 @@
 	
 	"use strict";
 	
-	var invariant = __webpack_require__(23);
+	var invariant = __webpack_require__(30);
 	
 	var _lastID = 1;
 	var _prefix = 'ID_';
@@ -1797,7 +2106,7 @@
 
 
 /***/ },
-/* 23 */
+/* 30 */
 /***/ function(module, exports) {
 
 	/**
@@ -1856,7 +2165,7 @@
 
 
 /***/ },
-/* 24 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1871,7 +2180,7 @@
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 	
-	var _utilsFunctions = __webpack_require__(17);
+	var _utilsFunctions = __webpack_require__(24);
 	
 	var fn = _interopRequireWildcard(_utilsFunctions);
 	
@@ -1929,7 +2238,7 @@
 	}
 
 /***/ },
-/* 25 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1946,11 +2255,11 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	var _utilsFunctions = __webpack_require__(17);
+	var _utilsFunctions = __webpack_require__(24);
 	
 	var fn = _interopRequireWildcard(_utilsFunctions);
 	
-	var _utilsAltUtils = __webpack_require__(16);
+	var _utilsAltUtils = __webpack_require__(23);
 	
 	var utils = _interopRequireWildcard(_utilsAltUtils);
 	
@@ -2026,7 +2335,67 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 26 */
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	
+	var _react = __webpack_require__(4);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _storesSkuStore = __webpack_require__(34);
+	
+	var _storesSkuStore2 = _interopRequireDefault(_storesSkuStore);
+	
+	var List = _react2['default'].createClass({
+	  displayName: 'List',
+	
+	  getInitialState: function getInitialState() {
+	    return {
+	      skuList: _storesSkuStore2['default'].getState().skus
+	    };
+	  },
+	
+	  componentDidMount: function componentDidMount() {
+	    _storesSkuStore2['default'].listen(this.onChange);
+	  },
+	
+	  componentWillUnmount: function componentWillUnmount() {
+	    _storesSkuStore2['default'].listen(this.onChange);
+	  },
+	
+	  onChange: function onChange(state) {
+	    this.setState({ skuList: state.skus });
+	  },
+	
+	  render: function render() {
+	    console.log(this.state.skuList);
+	
+	    return _react2['default'].createElement(
+	      'ul',
+	      null,
+	      this.state.skuList.map(function (sku, index) {
+	        return _react2['default'].createElement(
+	          'li',
+	          { key: index },
+	          sku
+	        );
+	      })
+	    );
+	  }
+	});
+	exports['default'] = List;
+	module.exports = exports['default'];
+
+/***/ },
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2041,479 +2410,46 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
-	var _flux = __webpack_require__(13);
+	var _flux = __webpack_require__(20);
 	
 	var _flux2 = _interopRequireDefault(_flux);
 	
-	var WishlistActions = (function () {
-	  function WishlistActions() {
-	    _classCallCheck(this, WishlistActions);
+	var _actionsCatalogActions = __webpack_require__(19);
+	
+	var _actionsCatalogActions2 = _interopRequireDefault(_actionsCatalogActions);
+	
+	var SkuStore = (function () {
+	  function SkuStore() {
+	    _classCallCheck(this, SkuStore);
+	
+	    //guarda os sku
+	    this.skus = [];
+	
+	    this.bindListeners({
+	      handleAddSku: _actionsCatalogActions2['default'].ADD_SKU,
+	      setInitialState: _actionsCatalogActions2['default'].SET_INITIAL_STATE
+	    });
 	  }
 	
-	  _createClass(WishlistActions, [{
-	    key: 'addSku',
-	    value: function addSku(sku) {
-	      this.dispatch(sku);
+	  _createClass(SkuStore, [{
+	    key: 'handleAddSku',
+	    value: function handleAddSku(sku) {
+	      if (this.skus.indexOf(sku) < 0) {
+	        this.skus.push(sku); //coloca sku no final da array de skus
+	      }
 	    }
 	  }, {
-	    key: 'addList',
-	    value: function addList(skus) {
-	      this.dispatch(skus);
+	    key: 'setInitialState',
+	    value: function setInitialState(skus) {
+	      this.skus = skus;
 	    }
 	  }]);
 	
-	  return WishlistActions;
+	  return SkuStore;
 	})();
 	
-	exports['default'] = _flux2['default'].createActions(WishlistActions);
+	exports['default'] = _flux2['default'].createStore(SkuStore, 'SkuStore');
 	module.exports = exports['default'];
-
-/***/ },
-/* 27 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _react = __webpack_require__(3);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _Picture = __webpack_require__(29);
-	
-	var _Picture2 = _interopRequireDefault(_Picture);
-	
-	var _Price = __webpack_require__(34);
-	
-	var _Price2 = _interopRequireDefault(_Price);
-	
-	var _AddCart = __webpack_require__(28);
-	
-	var _AddCart2 = _interopRequireDefault(_AddCart);
-	
-	var _Delete = __webpack_require__(35);
-	
-	var _Delete2 = _interopRequireDefault(_Delete);
-	
-	var _Description = __webpack_require__(36);
-	
-	var _Description2 = _interopRequireDefault(_Description);
-	
-	var WishlistItem = _react2['default'].createClass({
-	  displayName: 'WishlistItem',
-	
-	  render: function render() {
-	    return _react2['default'].createElement(
-	      'nav',
-	      { className: 'col-md-12 navbar navbar-default' },
-	      _react2['default'].createElement(
-	        'div',
-	        { className: 'container-fluid row' },
-	        _react2['default'].createElement(
-	          'div',
-	          { className: 'col-xs-4 navbar-default' },
-	          _react2['default'].createElement(_Picture2['default'], { sku: this.props.sku })
-	        ),
-	        _react2['default'].createElement(
-	          'div',
-	          { className: 'col-xs-4 navbar-default' },
-	          _react2['default'].createElement(_Description2['default'], { sku: this.props.sku })
-	        ),
-	        _react2['default'].createElement(
-	          'div',
-	          { className: 'col-xs-4 navbar-deafult' },
-	          _react2['default'].createElement(
-	            'div',
-	            { className: 'col-xs-12' },
-	            _react2['default'].createElement(
-	              'div',
-	              { className: 'col-xs-6' },
-	              _react2['default'].createElement(_Price2['default'], { sku: this.props.sku })
-	            ),
-	            _react2['default'].createElement(
-	              'div',
-	              { className: 'col-xs-6' },
-	              _react2['default'].createElement(_Delete2['default'], { sku: this.props.sku })
-	            )
-	          ),
-	          _react2['default'].createElement(
-	            'div',
-	            { className: 'col-xs-12' },
-	            _react2['default'].createElement(_AddCart2['default'], { sku: this.props.sku })
-	          )
-	        )
-	      )
-	    );
-	  }
-	});
-	
-	exports['default'] = WishlistItem;
-	module.exports = exports['default'];
-
-/***/ },
-/* 28 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _react = __webpack_require__(3);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var AddCart = _react2['default'].createClass({
-	  displayName: 'AddCart',
-	
-	  addClick: function addClick() {
-	    console.log('Produto adicionado ao carrinho');
-	  },
-	
-	  render: function render() {
-	    return _react2['default'].createElement(
-	      'div',
-	      { className: 'col-xs-4 navbar-form navbar-right row container-fluid' },
-	      _react2['default'].createElement(
-	        'button',
-	        { type: 'button',
-	          className: 'glyphicon glyphicon-shopping-cart btn btn-success',
-	          onClick: this.addClick },
-	        'AddCart'
-	      )
-	    );
-	  }
-	});
-	
-	exports['default'] = AddCart;
-	module.exports = exports['default'];
-
-/***/ },
-/* 29 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _react = __webpack_require__(3);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _stylesWishlistItemLess = __webpack_require__(30);
-	
-	var _stylesWishlistItemLess2 = _interopRequireDefault(_stylesWishlistItemLess);
-	
-	// eslint-disable
-	
-	var Picture = _react2['default'].createClass({
-	  displayName: 'Picture',
-	
-	  render: function render() {
-	    return _react2['default'].createElement(
-	      'div',
-	      { className: 'row container-fluid' },
-	      _react2['default'].createElement('img', { src: 'https://placekitten.com/g/200/300', className: 'img-responsive img-rounded product__img center-block' })
-	    );
-	  }
-	});
-	
-	exports['default'] = Picture;
-	module.exports = exports['default'];
-
-/***/ },
-/* 30 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(31);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(33)(content, {});
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		module.hot.accept("!!/home/vtex/gitbolado/wishlist/node_modules/css-loader/index.js!/home/vtex/gitbolado/wishlist/node_modules/less-loader/index.js!/home/vtex/gitbolado/wishlist/src/styles/WishlistItem.less", function() {
-			var newContent = require("!!/home/vtex/gitbolado/wishlist/node_modules/css-loader/index.js!/home/vtex/gitbolado/wishlist/node_modules/less-loader/index.js!/home/vtex/gitbolado/wishlist/src/styles/WishlistItem.less");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 31 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(32)();
-	exports.push([module.id, ".product__img {\n  height: 100px;\n  margin-top: 5px;\n}\n", ""]);
-
-/***/ },
-/* 32 */
-/***/ function(module, exports) {
-
-	module.exports = function() {
-		var list = [];
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-		return list;
-	}
-
-/***/ },
-/* 33 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	var stylesInDom = {},
-		memoize = function(fn) {
-			var memo;
-			return function () {
-				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
-				return memo;
-			};
-		},
-		isOldIE = memoize(function() {
-			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
-		}),
-		getHeadElement = memoize(function () {
-			return document.head || document.getElementsByTagName("head")[0];
-		}),
-		singletonElement = null,
-		singletonCounter = 0;
-	
-	module.exports = function(list, options) {
-		if(false) {
-			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
-		}
-	
-		options = options || {};
-		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-		// tags it will allow on a page
-		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
-	
-		var styles = listToStyles(list);
-		addStylesToDom(styles, options);
-	
-		return function update(newList) {
-			var mayRemove = [];
-			for(var i = 0; i < styles.length; i++) {
-				var item = styles[i];
-				var domStyle = stylesInDom[item.id];
-				domStyle.refs--;
-				mayRemove.push(domStyle);
-			}
-			if(newList) {
-				var newStyles = listToStyles(newList);
-				addStylesToDom(newStyles, options);
-			}
-			for(var i = 0; i < mayRemove.length; i++) {
-				var domStyle = mayRemove[i];
-				if(domStyle.refs === 0) {
-					for(var j = 0; j < domStyle.parts.length; j++)
-						domStyle.parts[j]();
-					delete stylesInDom[domStyle.id];
-				}
-			}
-		};
-	}
-	
-	function addStylesToDom(styles, options) {
-		for(var i = 0; i < styles.length; i++) {
-			var item = styles[i];
-			var domStyle = stylesInDom[item.id];
-			if(domStyle) {
-				domStyle.refs++;
-				for(var j = 0; j < domStyle.parts.length; j++) {
-					domStyle.parts[j](item.parts[j]);
-				}
-				for(; j < item.parts.length; j++) {
-					domStyle.parts.push(addStyle(item.parts[j], options));
-				}
-			} else {
-				var parts = [];
-				for(var j = 0; j < item.parts.length; j++) {
-					parts.push(addStyle(item.parts[j], options));
-				}
-				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
-			}
-		}
-	}
-	
-	function listToStyles(list) {
-		var styles = [];
-		var newStyles = {};
-		for(var i = 0; i < list.length; i++) {
-			var item = list[i];
-			var id = item[0];
-			var css = item[1];
-			var media = item[2];
-			var sourceMap = item[3];
-			var part = {css: css, media: media, sourceMap: sourceMap};
-			if(!newStyles[id])
-				styles.push(newStyles[id] = {id: id, parts: [part]});
-			else
-				newStyles[id].parts.push(part);
-		}
-		return styles;
-	}
-	
-	function createStyleElement() {
-		var styleElement = document.createElement("style");
-		var head = getHeadElement();
-		styleElement.type = "text/css";
-		head.appendChild(styleElement);
-		return styleElement;
-	}
-	
-	function addStyle(obj, options) {
-		var styleElement, update, remove;
-	
-		if (options.singleton) {
-			var styleIndex = singletonCounter++;
-			styleElement = singletonElement || (singletonElement = createStyleElement());
-			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
-			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
-		} else {
-			styleElement = createStyleElement();
-			update = applyToTag.bind(null, styleElement);
-			remove = function () {
-				styleElement.parentNode.removeChild(styleElement);
-			};
-		}
-	
-		update(obj);
-	
-		return function updateStyle(newObj) {
-			if(newObj) {
-				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
-					return;
-				update(obj = newObj);
-			} else {
-				remove();
-			}
-		};
-	}
-	
-	function replaceText(source, id, replacement) {
-		var boundaries = ["/** >>" + id + " **/", "/** " + id + "<< **/"];
-		var start = source.lastIndexOf(boundaries[0]);
-		var wrappedReplacement = replacement
-			? (boundaries[0] + replacement + boundaries[1])
-			: "";
-		if (source.lastIndexOf(boundaries[0]) >= 0) {
-			var end = source.lastIndexOf(boundaries[1]) + boundaries[1].length;
-			return source.slice(0, start) + wrappedReplacement + source.slice(end);
-		} else {
-			return source + wrappedReplacement;
-		}
-	}
-	
-	function applyToSingletonTag(styleElement, index, remove, obj) {
-		var css = remove ? "" : obj.css;
-	
-		if(styleElement.styleSheet) {
-			styleElement.styleSheet.cssText = replaceText(styleElement.styleSheet.cssText, index, css);
-		} else {
-			var cssNode = document.createTextNode(css);
-			var childNodes = styleElement.childNodes;
-			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
-			if (childNodes.length) {
-				styleElement.insertBefore(cssNode, childNodes[index]);
-			} else {
-				styleElement.appendChild(cssNode);
-			}
-		}
-	}
-	
-	function applyToTag(styleElement, obj) {
-		var css = obj.css;
-		var media = obj.media;
-		var sourceMap = obj.sourceMap;
-	
-		if(sourceMap && typeof btoa === "function") {
-			try {
-				css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(JSON.stringify(sourceMap)) + " */";
-				css = "@import url(\"data:text/css;base64," + btoa(css) + "\")";
-			} catch(e) {}
-		}
-	
-		if(media) {
-			styleElement.setAttribute("media", media)
-		}
-	
-		if(styleElement.styleSheet) {
-			styleElement.styleSheet.cssText = css;
-		} else {
-			while(styleElement.firstChild) {
-				styleElement.removeChild(styleElement.firstChild);
-			}
-			styleElement.appendChild(document.createTextNode(css));
-		}
-	}
-
-
-/***/ },
-/* 34 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _react = __webpack_require__(3);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var Price = _react2["default"].createClass({
-	  displayName: "Price",
-	
-	  render: function render() {
-	    return _react2["default"].createElement(
-	      "div",
-	      { className: "col-xs-4 " },
-	      _react2["default"].createElement(
-	        "p",
-	        { className: "text-center navbar-brand" },
-	        "R$ ",
-	        this.props.sku.price
-	      )
-	    );
-	  }
-	});
-	exports["default"] = Price;
-	module.exports = exports["default"];
 
 /***/ },
 /* 35 */
@@ -2527,210 +2463,21 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
-	var _react = __webpack_require__(3);
+	var _react = __webpack_require__(4);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var Delete = _react2['default'].createClass({
-	  displayName: 'Delete',
-	
-	  delClick: function delClick() {
-	    console.log('Produto excluido');
-	  },
-	
-	  render: function render() {
-	    return _react2['default'].createElement(
-	      'div',
-	      { className: 'col-xs-4 navbar-form row container-fluid' },
-	      _react2['default'].createElement(
-	        'button',
-	        { type: 'button',
-	          className: 'btn btn-danger',
-	          onClick: this.delClick },
-	        'X'
-	      )
-	    );
-	  }
-	});
-	
-	exports['default'] = Delete;
-	module.exports = exports['default'];
-
-/***/ },
-/* 36 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
-	var _react = __webpack_require__(3);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var Description = _react2["default"].createClass({
-	  displayName: "Description",
-	
-	  render: function render() {
-	    return _react2["default"].createElement(
-	      "div",
-	      null,
-	      _react2["default"].createElement(
-	        "p",
-	        { className: "text-center navbar-form" },
-	        this.props.sku.description
-	      )
-	    );
-	  }
-	});
-	
-	exports["default"] = Description;
-	module.exports = exports["default"];
-
-/***/ },
-/* 37 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _react = __webpack_require__(3);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _catalogSkuItem = __webpack_require__(38);
-	
-	var _catalogSkuItem2 = _interopRequireDefault(_catalogSkuItem);
-	
-	var Catalog = _react2['default'].createClass({
-	  displayName: 'Catalog',
-	
-	  getInitialState: function getInitialState() {
-	    return {
-	      skus: [{ id: 1, description: 'Tenis Nike', category: 'calçado', price: 99.0 }, { id: 2, description: 'Camisa Polo', category: 'camisa', price: 80 }, { id: 3, description: 'Casaco Ecko', category: 'casaco', price: 247.90 }, { id: 4, description: 'Tenis Adidas', category: 'calçado', price: 270.0 }, { id: 5, description: 'Tenis Reebok', category: 'calçado', price: 130.0 }]
-	    };
-	  },
-	  render: function render() {
-	    return _react2['default'].createElement(
-	      'nav',
-	      { className: 'col-xs-12 navbar navbar-default' },
-	      _react2['default'].createElement(
-	        'div',
-	        { className: 'container-fluid row center-block' },
-	        _react2['default'].createElement(
-	          'h1',
-	          null,
-	          'Catalogo Fake'
-	        ),
-	        _react2['default'].createElement(
-	          'div',
-	          { className: 'center' },
-	          this.state.skus.map(function (sku, index) {
-	            return _react2['default'].createElement(_catalogSkuItem2['default'], { sku: sku, key: index });
-	          })
-	        )
-	      )
-	    );
-	  }
-	});
-	
-	exports['default'] = Catalog;
-	module.exports = exports['default'];
-
-/***/ },
-/* 38 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _react = __webpack_require__(3);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _actionsWishlistActions = __webpack_require__(26);
-	
-	var _actionsWishlistActions2 = _interopRequireDefault(_actionsWishlistActions);
-	
-	var SkuItem = _react2['default'].createClass({
-	  displayName: 'SkuItem',
-	
-	  addSkuToWishlist: function addSkuToWishlist() {
-	    _actionsWishlistActions2['default'].addSku(this.props.sku);
-	  },
-	
-	  render: function render() {
-	    return _react2['default'].createElement(
-	      'div',
-	      { className: 'col-xs-1 navbar-form' },
-	      _react2['default'].createElement(
-	        'p',
-	        null,
-	        this.props.sku.description
-	      ),
-	      _react2['default'].createElement(
-	        'p',
-	        null,
-	        'Categoria: ',
-	        this.props.sku.category
-	      ),
-	      _react2['default'].createElement(
-	        'p',
-	        null,
-	        'R$ ',
-	        this.props.sku.price
-	      ),
-	      _react2['default'].createElement('button', {
-	        className: 'glyphicon glyphicon-heart btn btn-default',
-	        onClick: this.addSkuToWishlist })
-	    );
-	  }
-	});
-	
-	exports['default'] = SkuItem;
-	module.exports = exports['default'];
-
-/***/ },
-/* 39 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _react = __webpack_require__(3);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactCookie = __webpack_require__(40);
+	var _reactCookie = __webpack_require__(36);
 	
 	var _reactCookie2 = _interopRequireDefault(_reactCookie);
 	
-	var _storesWishlistStore = __webpack_require__(12);
+	var _storesSkuStore = __webpack_require__(34);
 	
-	var _storesWishlistStore2 = _interopRequireDefault(_storesWishlistStore);
+	var _storesSkuStore2 = _interopRequireDefault(_storesSkuStore);
 	
-	var _actionsWishlistActions = __webpack_require__(26);
+	var _actionsCatalogActions = __webpack_require__(19);
 	
-	var _actionsWishlistActions2 = _interopRequireDefault(_actionsWishlistActions);
+	var _actionsCatalogActions2 = _interopRequireDefault(_actionsCatalogActions);
 	
 	var CookieController = _react2['default'].createClass({
 	  displayName: 'CookieController',
@@ -2739,17 +2486,17 @@
 	    var wishlist = _reactCookie2['default'].load('wishlist');
 	
 	    if (wishlist !== undefined) {
-	      _actionsWishlistActions2['default'].addList(wishlist.skus);
+	      _actionsCatalogActions2['default'].setInitialState(wishlist.skus);
 	    }
 	    return null;
 	  },
 	
 	  componentDidMount: function componentDidMount() {
-	    _storesWishlistStore2['default'].listen(this.onChange);
+	    _storesSkuStore2['default'].listen(this.onChange);
 	  },
 	
 	  componentWillUnmount: function componentWillUnmount() {
-	    _storesWishlistStore2['default'].listen(this.onChange);
+	    _storesSkuStore2['default'].listen(this.onChange);
 	  },
 	
 	  onChange: function onChange(state) {
@@ -2768,10 +2515,10 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 40 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var cookie = __webpack_require__(41);
+	var cookie = __webpack_require__(37);
 	
 	var _rawCookies = {};
 	var _cookies = {};
@@ -2846,7 +2593,7 @@
 
 
 /***/ },
-/* 41 */
+/* 37 */
 /***/ function(module, exports) {
 
 	/*!
@@ -2969,4 +2716,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=WishlistApp.js.map
+//# sourceMappingURL=wishlist.js.map

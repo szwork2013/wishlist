@@ -9,7 +9,7 @@ let CookieController = React.createClass({
     var wishlist = cookie.load('wishlist');
 
     if ( wishlist !== undefined) {
-      WishlistActions.setInitialState(wishlist.skus);
+      WishlistActions.addList(wishlist.skus);
     }
     return null;
   },
