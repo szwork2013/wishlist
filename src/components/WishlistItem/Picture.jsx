@@ -1,12 +1,14 @@
 import React from 'react';
-import style from '../../styles/WishlistItem.less'; // eslint-disable
+import style from '../../styles/Picture.less'; // eslint-disable
 
 let Picture = React.createClass({
 
   render() {
     return (
-      <div className="row container-fluid">
-        <img src="https://placekitten.com/g/200/300" className="img-responsive img-rounded product__img center-block"/>
+      <div class="col-xs-4">
+        <div class="col-xs-12 wishlistphoto">
+          <img src="images/wishlist1.png" className="img-thumbnail wishlistphoto"/>
+        </div>
       </div>
     );
   }
