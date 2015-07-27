@@ -5,7 +5,7 @@ let Description = React.createClass({
   render() {
     return (
       <div>
-        <p className="text-center navbar-form">{this.props.sku.description}</p>
+        <p className="col-xs-8 namecatalog">{this.props.sku.description}</p>
       </div>
     );
   }
