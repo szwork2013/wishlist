@@ -1,15 +1,12 @@
 import React from 'react';
+import style from '../../styles/WishlistItem.less'; // eslint-disable
 
 let Picture = React.createClass({
 
   render() {
     return (
-      <div className="col-xs-4 navbar-form navbar-right row container-fluid">
-        <button type="button"
-        className="btn btn-success"
-        onClick={this.handleClick}>
-          Pic
-        </button>
+      <div className="row container-fluid">
+        <img src="https://placekitten.com/g/200/300" className="img-responsive img-rounded product__img center-block"/>
       </div>
     );
   }

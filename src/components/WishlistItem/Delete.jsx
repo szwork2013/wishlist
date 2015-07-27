@@ -7,10 +7,10 @@ let Delete = React.createClass({
 
     render() {
       return (
-        <div className="col-xs-4 navbar-form navbar-right row container-fluid">
+        <div className="col-xs-4 navbar-form row container-fluid">
           <button type="button"
-          className="btn btn-success"
-          onClick={this.handleClick}>
+          className="btn btn-danger"
+          onClick={this.delClick}>
             X
           </button>
         </div>
