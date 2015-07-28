@@ -5,11 +5,9 @@ let Picture = React.createClass({
 
   render() {
     return (
-      <div class="col-xs-4">
-        <div class="col-xs-12 wishlistphoto">
-          <img src="images/wishlist1.png" className="img-thumbnail wishlistphoto"/>
+        <div class="col-xs-12">
+          <img src="./images/wishlist1.png" className="img-thumbnail wishlistphoto"/>
         </div>
-      </div>
     );
   }
 });
