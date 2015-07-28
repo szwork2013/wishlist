@@ -1,5 +1,30 @@
 {
-  "name": "default",
-  "ids": [],
-  "skus": []
+  "schema": {
+    "type": "object",
+    "properties": {
+      "email": {
+        "type": "string"
+      },
+      "skus": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "_self": {
+              "type": "object",
+              "properties": {
+                "href": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "required": [
+      "email",
+      "skus"
+    ]
+  }
 }
