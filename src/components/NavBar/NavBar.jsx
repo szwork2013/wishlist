@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Name from './Name.jsx';
-import WishlistIcon from './WishlisIcon.jsx';
-import style from '../../styles/NavBar';
+import WishlistIcon from './WishlistIcon.jsx';
+import style from '../../styles/NavBar.less';
 
 let NavBar = React.createClass({
 

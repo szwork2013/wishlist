@@ -5,6 +5,7 @@ import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import Wishlist from './components/Wishlist';
 import CookieController from './components/CookieController';
+import NavBar from './components/NavBar/NavBar.jsx';
 import Catalog from './components/Catalog/Catalog.jsx';
 
 var WishlistApp = React.createClass({
@@ -15,6 +16,7 @@ var WishlistApp = React.createClass({
         <meta name="viewport" content="width=device-width user-scalable=no"/>
         <CookieController>
           <Header/>
+          <NavBar/>
           <Wishlist/>
           <Footer/>
           <Catalog/>
