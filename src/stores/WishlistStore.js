@@ -7,17 +7,25 @@ class WishlistStore {
 
     this.bindListeners({
       handleAddSku: WishlistActions.ADD_SKU,
-      handleAddList: WishlistActions.ADD_LIST
+      handleAddList: WishlistActions.ADD_LIST,
+      handleRemoveSku: WishlistActions.REMOVE_SKU
     });
   }
+
   handleAddSku(sku) {
     if(this.skus.filter((item) => item.id === sku.id).length === 0) { //filtra 'skus' comparando 'id's de cada item
     //quando js compara 2 objetos ele não compara conteúdo, só referências.
       this.skus.push(sku);
     }
   }
+
   handleAddList(list) {
-      this.skus = list;
+    this.skus = list;
+  }
+
+  handleRemoveSku(sku) {
+    //console.log(sku);
+    this.skus.splice(this.skus.indexOf(sku), 1);
   }
 }
 
