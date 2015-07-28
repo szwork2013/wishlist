@@ -1,5 +1,5 @@
 import React from 'react';
-import SkuItem from './catalog/SkuItem';
+import SkuItem from './Catalog/SkuItem';
 
 let Catalog = React.createClass({
   getInitialState(){

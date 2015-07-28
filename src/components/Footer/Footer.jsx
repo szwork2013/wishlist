@@ -1,6 +1,6 @@
 import React from 'react';
-import Buy from './footer/Buy';
-import Send from './footer/Send';
+import Buy from './Footer/Buy';
+import Send from './fFooter/Send';
 
 let Footer = React.createClass({
 

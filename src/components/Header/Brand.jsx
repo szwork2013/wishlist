@@ -6,7 +6,7 @@ let Brand = React.createClass({
   render() {
     return (
       <div className="col-xs-4 navbar-brand">
-        <img src="../images/logo.png" className="logo"/>
+        <img src="../Images/logo.png" className="logo"/>
       </div>
     );
   }
