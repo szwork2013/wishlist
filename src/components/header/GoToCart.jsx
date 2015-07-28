@@ -1,4 +1,5 @@
 import React from 'react';
+import style from '../../styles/GoToCart.less';
 
 let Buy = React.createClass({
   handleClick() {
