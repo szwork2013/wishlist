@@ -2,7 +2,7 @@ import React from 'react';
 
 import Menu from './header/Menu';
 import Brand from './header/Brand';
-import Buy from './header/Buy';
+import GoToCart from './header/GoToCart';
 
 let Header = React.createClass({
 
@@ -12,7 +12,7 @@ let Header = React.createClass({
         <div className="container-fluid row">
           <Menu/>
           <Brand/>
-          <Buy/>
+          <GoToCart/>
         </div>
       </nav>
     );
