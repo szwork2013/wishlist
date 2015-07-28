@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Menu from './Header/Menu';
-import Brand from './Header/Brand';
-import GoToCart from './Header/GoToCart';
-import style from '../styles/WishlistPage.less';
+import Menu from './Menu';
+import Brand from './Brand';
+import GoToCart from './GoToCart';
+import style from '../../styles/WishlistPage.less';
 
 let Header = React.createClass({
 

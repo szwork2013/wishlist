@@ -1,11 +1,11 @@
 import storefront from 'storefront';
 import React from 'react';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/Header/Header.jsx';
+import Footer from './components/Footer/Footer.jsx';
 import Wishlist from './components/Wishlist';
-import Catalog from './components/Catalog';
 import CookieController from './components/CookieController';
+import Catalog from './components/Catalog/Catalog.jsx';
 
 var WishlistApp = React.createClass({
   render: function(){
