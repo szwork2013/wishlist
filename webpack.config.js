@@ -34,7 +34,9 @@ module.exports = {
       'components': path.join(__dirname, '/src/components/'),
       'pages': path.join(__dirname, '/src/pages/'),
       'styles': path.join(__dirname, '/src/styles/'),
-      'utils': path.join(__dirname, '/src/utils/')
+      'actions': path.join(__dirname, '/src/actions/'),
+      'utils': path.join(__dirname, '/src/utils/'),
+      'stores': path.join(__dirname, '/src/stores/')
     }
   },
 
