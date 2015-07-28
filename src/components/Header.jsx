@@ -3,7 +3,7 @@ import React from 'react';
 import Menu from './header/Menu';
 import Brand from './header/Brand';
 import GoToCart from './header/GoToCart';
-import style from '../../styles/WishlistPage.less';
+import style from '../styles/WishlistPage.less';
 
 let Header = React.createClass({
 
