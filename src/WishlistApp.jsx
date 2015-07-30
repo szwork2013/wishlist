@@ -7,6 +7,7 @@ import Wishlist from './components/Wishlist';
 import CookieController from './components/CookieController';
 import NavBar from './components/NavBar/NavBar.jsx';
 import Catalog from './components/Catalog/Catalog.jsx';
+import style from 'styles/WishlistPage.less';
 
 var WishlistApp = React.createClass({
   render: function(){
@@ -17,6 +18,9 @@ var WishlistApp = React.createClass({
         <CookieController>
           <Header/>
           <NavBar/>
+          <div className="top-bar">
+            <Footer/>
+          </div>
           <Wishlist/>
           <Footer/>
           <Catalog/>
