@@ -1,14 +1,14 @@
 import React from 'react';
 import style from '../../styles/GoToCart.less';
 
-let Buy = React.createClass({
+let GoToCart = React.createClass({
   handleClick() {
     console.log('Foi para o carrinho');
   },
 
   render() {
     return (
-      <div className="col-xs-5">
+      <div className="col-xs-3">
         <button type="button"
         className="buttons glyphicon glyphicon-shopping-cart btn btn-default col-xs-5 buttom"
         onClick={this.handleClick}></button>
@@ -17,4 +17,4 @@ let Buy = React.createClass({
   }
 });
 
-export default Buy;
+export default GoToCart;
