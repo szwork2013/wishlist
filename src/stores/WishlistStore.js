@@ -3,7 +3,6 @@ import WishlistActions from '../actions/WishlistActions';
 
 class WishlistStore {
   constructor() {
-    //guarda os sku
     this.skus = [];
 
     this.bindListeners({
@@ -12,7 +11,8 @@ class WishlistStore {
     });
   }
   handleAddSku(sku) {
-    if(this.skus.indexOf(sku) < 0) {
+    if(this.skus.filter((item) => item.id === sku.id).length === 0) { //filtra 'skus' comparando 'id's de cada item
+    //quando js compara 2 objetos ele não compara conteúdo, só referências.
       this.skus.push(sku);
     }
   }

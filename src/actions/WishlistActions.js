@@ -5,7 +5,7 @@ class WishlistActions {
     this.dispatch(sku);
   }
   addList(skus){
-  	this.dispatch(skus);
+    this.dispatch(skus);
   }
 }
 
