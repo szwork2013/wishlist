@@ -6,24 +6,26 @@ import WishlistActions from '../actions/WishlistActions';
 let CookieController = React.createClass({
 
   getInitialState() {
-    var wishlist = cookie.load('wishlist');
-
-    if ( wishlist !== undefined) {
-      WishlistActions.addList(wishlist.skus);
-    }
-    return null;
+    return WishlistStore.getState();
   },
 
   componentDidMount() {
     WishlistStore.listen(this.onChange);
+
+    var wishlist = cookie.load('wishlist');
+
+    if (wishlist) {
+      WishlistActions.addList(wishlist.skus);
+    }
   },
 
   componentWillUnmount() {
-    WishlistStore.listen(this.onChange);
+    WishlistStore.unlisten(this.onChange);
   },
 
   onChange(state) {
     cookie.save('wishlist', {'skus': state.skus});
+    this.setState(state);
   },
 
   render() {
