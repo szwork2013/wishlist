@@ -32,6 +32,7 @@
     "alt": "^0.17.1",
     "jquery": "^2.1.4",
     "react": "^0.13.3",
-    "react-tooltip": "^0.3.4"
+    "react-tooltip": "^0.3.4",
+    "webpack-dev-server": "^1.10.1"
   }
 }

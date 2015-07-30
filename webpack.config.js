@@ -41,7 +41,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './storefront/assets/'),
     publicPath: publicPath,
-    filename: 'WishlistApp.js'
+    filename: 'WishlistApp.js',
+    chunkFilename: 'WishlistApp-[name].js',
+    devtoolModuleFilenameTemplate: 'webpack:///WishlistApp/[resource]?[id]-[hash]'
   },
 
   eslint: {
@@ -87,6 +89,8 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.AggressiveMergingPlugin()
+  ] : hot ? [
+    new webpack.HotModuleReplacementPlugin()
   ] : [],
 
   quiet: false,
