@@ -5,9 +5,7 @@ let Name = React.createClass({
 
   render() {
     return (
-      <div className="col-xs-12">
-        <div className="col-xs-4">WISHLIST</div>
-      </div>
+        <div className="col-xs-2">WISHLIST</div>
     );
   }
 });
