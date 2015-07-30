@@ -4,9 +4,7 @@ let Price = React.createClass({
 
   render() {
     return (
-      <div className="col-xs-8">
-        <p className="pricecatalog">R$ {this.props.sku.price}</p>
-      </div>
+        <p className="col-xs-12 pricecatalog">R$ {this.props.sku.price}</p>
     );
   }
 });

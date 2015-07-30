@@ -18,12 +18,11 @@ let WishlistItem = React.createClass({
         </div>
           <div className="col-xs-4">
             <Description sku={this.props.sku}/>
+            <Price sku={this.props.sku}/>
           </div>
           <div className="col-xs-4">
-            <div className = "col-xs-12">
-              <Price sku={this.props.sku}/>
+              <div className="col-xs-6"></div>
               <Delete sku={this.props.sku}/>
-            </div>
               <AddCart sku={this.props.sku}/>
           </div>
       </nav>
