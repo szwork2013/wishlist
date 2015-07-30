@@ -6,7 +6,7 @@ import AddCart from './AddCart';
 import Delete from './Delete';
 import Description from './Description';
 
-import style from '../../styles/WishlistPage.less';
+import style from '../../styles/WishlistPage.less'; // eslint-disable-line
 
 let WishlistItem = React.createClass({
 

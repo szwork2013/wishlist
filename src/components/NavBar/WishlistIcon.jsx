@@ -1,5 +1,5 @@
 import React from 'react';
-import style from 'styles/NavBar.less';
+import style from 'styles/NavBar.less'; // eslint-disable-line
 
 let WishlistIcon = React.createClass({
 

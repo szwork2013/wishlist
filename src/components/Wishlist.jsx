@@ -1,6 +1,10 @@
 import React from 'react';
 import WishlistStore from '../stores/WishlistStore';
 import WishlistItem from '../components/WishlistItem/WishlistItem';
+<<<<<<< HEAD
+=======
+import style from '../styles/WishlistPage.less'; // eslint-disable-line
+>>>>>>> fixes eslint warnings
 
 let Wishlist = React.createClass({
   getInitialState() {

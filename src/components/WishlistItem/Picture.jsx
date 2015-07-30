@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../../styles/Picture.less'; // eslint-disable
+import style from '../../styles/Picture.less'; // eslint-disable-line
 
 let Picture = React.createClass({
 

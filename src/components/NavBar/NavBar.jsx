@@ -2,7 +2,7 @@ import React from 'react';
 
 import Name from './Name.jsx';
 import WishlistIcon from './WishlistIcon.jsx';
-import style from '../../styles/NavBar.less';
+import style from '../../styles/NavBar.less'; // eslint-disable-line
 
 let NavBar = React.createClass({
 

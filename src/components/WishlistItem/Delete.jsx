@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../../styles/AddCart.less';
+import style from '../../styles/AddCart.less'; // eslint-disable-line
 
 let Delete = React.createClass({
   delClick() {
