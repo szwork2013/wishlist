@@ -1,4 +1,5 @@
 import React from 'react';
+import style from '../../styles/Menu.less'; // eslint-disable-line
 
 let Menu = React.createClass({
   handleClick() {
@@ -7,7 +8,7 @@ let Menu = React.createClass({
 
   render() {
     return (
-      <div className="col-xs-4 navbar-form row container-fluid">
+      <div className="col-xs-3 menu">
         <button
         className="glyphicon glyphicon-menu-hamburger btn btn-default"
         onClick={this.handleClick}></button>

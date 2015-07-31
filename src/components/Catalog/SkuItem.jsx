@@ -1,5 +1,5 @@
 import React from 'react';
-import WishlistActions from '../../actions/WishlistActions';
+import WishlistActions from 'actions/WishlistActions';
 
 let SkuItem = React.createClass({
   addSkuToWishlist() {

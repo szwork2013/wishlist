@@ -1,12 +1,11 @@
 import React from 'react';
+import style from '../../styles/Description.less'; // eslint-disable-line
 
 let Description = React.createClass({
 
   render() {
     return (
-      <div>
-        <p className="text-center navbar-form">{this.props.sku.description}</p>
-      </div>
+        <p className="col-xs-12 namecatalog">{this.props.sku.description}</p>
     );
   }
 });

@@ -1,4 +1,5 @@
 import React from 'react';
+import style from '../../styles/AddCart.less'; // eslint-disable-line
 
 let AddCart = React.createClass({
     addClick() {
@@ -7,12 +8,8 @@ let AddCart = React.createClass({
 
       render() {
         return (
-          <div className="col-xs-4 navbar-form navbar-right row container-fluid">
-            <button type="button"
-            className="glyphicon glyphicon-shopping-cart btn btn-success"
-            onClick={this.addClick}>
-              AddCart
-            </button>
+          <div className="col-xs-12 cart">
+            <button className="buttons glyphicon glyphicon-shopping-cart btn btn-default col-xs-5 buttom" ></button>
           </div>
         );
       }
