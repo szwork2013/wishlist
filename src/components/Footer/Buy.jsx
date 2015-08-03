@@ -1,8 +1,11 @@
 import React from 'react';
+import cookie from 'react-cookie';
 
 let Buy = React.createClass({
   handleClick() {
-    console.log('vai compra nada não');
+    var cart = cookie.load('wishlist');
+    console.log(cart);
+    console.log('Lista comprada com sucesso'); //a ser mudado quando tiver um carrinho
   },
 
   render() {
