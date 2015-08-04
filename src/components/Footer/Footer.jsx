@@ -4,7 +4,7 @@ import Send from './Send';
 
 let Footer = React.createClass({
 
-  render: function(){
+  render() {
     return (
       <nav className="col-xs-12 navbar navbar-default">
         <div className="container-fluid row center-block">
