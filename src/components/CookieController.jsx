@@ -12,7 +12,7 @@ let CookieController = React.createClass({
   componentDidMount() {
     WishlistStore.listen(this.onChange);
 
-    var wishlist = cookie.load('wishlist');
+    let wishlist = cookie.load('wishlist');
 
     if (wishlist) {
       WishlistActions.addList(wishlist.skus);
