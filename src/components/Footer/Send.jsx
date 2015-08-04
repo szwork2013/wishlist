@@ -1,7 +1,8 @@
 import React from 'react';
 import WishlistStore from 'stores/WishlistStore';
+import _ from 'underscore';
 
-let Buy = React.createClass({
+let Send = React.createClass({
   getInitialState() { //sempre fazer o getInitialState "separado", nao pode pegar da outra funçao
     return WishlistStore.getState();
   },
@@ -19,7 +20,10 @@ let Buy = React.createClass({
   },
 
   handleClickMail() {
-    console.log('vai enviar nada não');
+    let mail = _.pluck(this.state.skus, 'id');
+
+    console.log('IDs:', mail);
+    console.log('IDs armazenados com sucesso.');
   },
 
   render() {
@@ -35,4 +39,4 @@ let Buy = React.createClass({
   }
 });
 
-export default Buy;
+export default Send;
