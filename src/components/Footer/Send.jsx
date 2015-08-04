@@ -20,11 +20,16 @@ let Send = React.createClass({
   },
 
   handleClickMail() {
-    let mail = _.pluck(this.state.skus, 'id');
+    let mail = this.state.skus;
 
-    console.log('IDs:', mail);
+    console.log('Lista:', mail);
     console.log('IDs armazenados com sucesso.');
+
+    //falta: fazer o componente separado do e-mail pegar a array mail (.mail // Send.mail 
+    // Send.funcao(this.mail))
+
   },
+
 
   render() {
     return (

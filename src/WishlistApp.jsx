@@ -7,7 +7,9 @@ import Wishlist from './components/Wishlist';
 import CookieController from './components/CookieController';
 import NavBar from './components/NavBar/NavBar.jsx';
 import Catalog from './components/Catalog/Catalog.jsx';
+import MailList from './components/MailList';
 import style from 'styles/WishlistPage.less'; // eslint-disable-line
+
 
 var WishlistApp = React.createClass({
   render: function(){
@@ -22,6 +24,7 @@ var WishlistApp = React.createClass({
             <Footer/>
           </div>
           <Wishlist/>
+          <MailList/>
           <Footer/>
           <Catalog/>
         </CookieController>
