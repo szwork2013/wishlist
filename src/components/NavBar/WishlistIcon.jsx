@@ -5,7 +5,7 @@ let WishlistIcon = React.createClass({
 
   render() {
     return (
-        <div className="center glyphicon glyphicon-heart wishlist col-xs-2 center-block">  Itens </div>
+        <div className="glyphicon glyphicon-heart wishlist-icon col-xs-2 center-block">  Itens </div>
     );
   }
 });

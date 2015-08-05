@@ -8,8 +8,8 @@ let AddCart = React.createClass({
 
       render() {
         return (
-          <div className="col-xs-12 cart">
-            <button className="buttons glyphicon glyphicon-shopping-cart btn btn-default col-xs-5 buttom" ></button>
+          <div className="pricecatalog">
+            <button className="glyphicon glyphicon-shopping-cart btn btn-default cart-wishlist" ></button>
           </div>
         );
       }

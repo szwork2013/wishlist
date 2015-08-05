@@ -10,7 +10,7 @@ let Menu = React.createClass({
     return (
       <div className="col-xs-3 menu">
         <button
-        className="glyphicon glyphicon-menu-hamburger btn btn-default"
+        className="glyphicon glyphicon-menu-hamburger btn btn-default buttom" 
         onClick={this.handleClick}></button>
       </div>
     );

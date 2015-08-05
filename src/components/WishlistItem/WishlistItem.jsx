@@ -12,22 +12,23 @@ let WishlistItem = React.createClass({
 
   render: function() {
     return (
-      <nav className="col-md-12 wishlistcontent">
-        <div className="col-xs-4">
+      <nav className="wishlistcontent col-xs-12 navbar uk-thumbnail">
+        <div className="wishlistlist navbar uk-thumbnail">
           <Picture sku={this.props.sku}/>
-        </div>
-          <div className="col-xs-4">
-            <Description sku={this.props.sku}/>
-            <Price sku={this.props.sku}/>
-          </div>
-          <div className="col-xs-4">
-              <div className="col-xs-6"></div>
-              <Delete sku={this.props.sku}/>
+          <div className="col-xs-8 description">
+            <div>
+              <Description sku={this.props.sku}/>
+            </div>
+            <div>
+              <Price sku={this.props.sku}/>
               <AddCart sku={this.props.sku}/>
+            </div>
           </div>
+        </div>
       </nav>
     );
   }
 });
 
 export default WishlistItem;
+/*<Delete sku={this.props.sku}/>*/
