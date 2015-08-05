@@ -37,6 +37,7 @@
     "react-router": "^0.13.3",
     "react-bootstrap": "^0.24.4",
     "react-tooltip": "^0.3.4",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "reqwest": "^2.0.1"
   }
 }
