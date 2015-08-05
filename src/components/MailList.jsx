@@ -4,18 +4,37 @@ import Send from './Footer/Send';
 import _ from 'underscore';
 
 let MailList = React.createClass({
-  // funcao() {
+  handleClickMailForm() {
+    console.log('estou funcionando click');
+  },
 
-
-  // },
+  handleSubmit(){
+  	console.log('estou funcionando submit');
+  },
 
   render() {
     return(
       <div>
-	    <form action="mailto:you@yourdmainhere.com" method="post" enctype="text/plain" >
-          Nome:<input type="text" name="Name"/>
-          Email:<input type="text" name="Email"/>
-          <input type="submit" name="submit" value="Submit"/>
+	    <form className="text-center" onSubmit={this.handleSubmit}>
+          <p>Nome:</p> 
+          <p><input 
+          type="text"
+          className="form-control input-sm hide-borders col-xs-2"
+          placeholder="Nome"/></p>
+
+          <p>Email:</p> 
+          <p> <input 
+          type="email"
+          className="form-control input-sm hide-borders col-xs-2"
+          placeholder="Email"/></p> 
+
+          <p><button type="button" 
+          className="btn btn-info"
+          onClick={this.handleClickMailForm}>
+          <a href="mailto:name@email.com">
+            ENVIAR
+          </a>
+          </button></p>
         </form>
       </div>
     );

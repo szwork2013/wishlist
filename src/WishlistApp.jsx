@@ -24,8 +24,8 @@ var WishlistApp = React.createClass({
             <Footer/>
           </div>
           <Wishlist/>
-          <MailList/>
           <Footer/>
+          <MailList/>
           <Catalog/>
         </CookieController>
       </div>
