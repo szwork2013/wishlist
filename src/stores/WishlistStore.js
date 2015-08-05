@@ -15,8 +15,7 @@ class WishlistStore {
   }
 
   handleAddSku(sku) {
-    if(this.skus.filter((item) => item.id === sku.id).length === 0) { //filtra 'skus' comparando 'id's de cada item
-    //quando js compara 2 objetos ele não compara conteúdo, só referências.
+    if(this.skus.filter((item) => item.id === sku.id).length === 0) {
       this.skus.push(sku);
     }
   }
@@ -32,6 +31,11 @@ class WishlistStore {
   handleDisplayPopover(){
     this.popoverBeenDisplayed = true;
   }
+  onSearchLists(query) {
+    this.skus = query.skus;
+    console.log(this.query.skus);
+  }
 }
+
 
 export default flux.createStore(WishlistStore, 'WishlistStore');
