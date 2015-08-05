@@ -5,7 +5,7 @@ let Description = React.createClass({
 
   render() {
     return (
-        <p className="col-xs-12 namecatalog">{this.props.sku.description}</p>
+        <p className="namecatalog">{this.props.sku.description}</p>
     );
   }
 });
