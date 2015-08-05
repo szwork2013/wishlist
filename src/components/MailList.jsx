@@ -28,13 +28,11 @@ let MailList = React.createClass({
           className="form-control input-sm hide-borders col-xs-2"
           placeholder="Email"/></p> 
 
-          <p><button type="button" 
+          <p><a href="mailto:name@email.com"><button type="button" 
           className="btn btn-info"
           onClick={this.handleClickMailForm}>
-          <a href="mailto:name@email.com">
             ENVIAR
-          </a>
-          </button></p>
+          </button></a></p>
         </form>
       </div>
     );
