@@ -1,7 +1,7 @@
 import React from 'react';
 import WishlistStore from '../stores/WishlistStore';
 import WishlistItem from '../components/WishlistItem/WishlistItem';
-import style from '../styles/WishlistPage.less'; // eslint-disable-line
+// import style from '../styles/WishlistPage.less'; // eslint-disable-line
 
 let Wishlist = React.createClass({
   getInitialState() {
