@@ -8,7 +8,7 @@ let NavBar = React.createClass({
 
   render() {
     return (
-      <div className=" bottom-bar wishlistnav">
+      <div className=" bottom-bar wishlistnav col-xs-7">
           <Name/>
           <WishlistIcon/>
       </div>
