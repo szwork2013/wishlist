@@ -1,3 +1,12 @@
+/***** Footer.jsx *******/
+/*
+* Descrição: Implementa o Footer na página da Wishlist.
+*
+*  Componentes relacionados:
+*     - Buy.jsx: componente do botão de comprar a lista inteira
+*     - Send.jsx: componente do botão de enviar a lista
+*
+*/
 import React from 'react';
 import Buy from './Buy';
 import Send from './Send';
