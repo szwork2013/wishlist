@@ -2,7 +2,6 @@ import React from 'react';
 import Picture from './Picture';
 import Price from './Price';
 import AddCart from './AddCart';
-import Delete from './Delete';
 import Description from './Description';
 import WishlistActions from '../../actions/WishlistActions';
 
