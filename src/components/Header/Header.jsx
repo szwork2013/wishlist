@@ -1,3 +1,15 @@
+/***** Header.jsx *******/
+/*
+* Descrição: Componente que implementa o Header
+*     na página da Wishlist.
+*
+*  Componentes relacionados:
+*     - Menu.jsx: implementa o botão de menu.
+*     - Brand.jsx: componente da imagem da marca.
+*     - GoToCart.jsx: implementa o botão associado à página do carrinho.
+*     - Header.less: descreve as classes de CSS usadas no componente Header.jsx.
+*
+*/
 import React from 'react';
 
 import Menu from './Menu';
