@@ -1,3 +1,9 @@
+/***** Send.jsx *******/
+/*
+* Descrição: Implementa o botão de enviar a lista no Footer
+*     e na barra intermediária na página da Wishlist.
+*
+*/
 import React from 'react';
 import WishlistStore from 'stores/WishlistStore';
 
