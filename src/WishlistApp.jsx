@@ -8,6 +8,7 @@ import CookieManager from './components/CookieManager';
 import NavBar from './components/NavBar/NavBar.jsx';
 import Catalog from './components/Catalog/Catalog.jsx';
 
+
 var WishlistApp = React.createClass({
   render() {
     return (
