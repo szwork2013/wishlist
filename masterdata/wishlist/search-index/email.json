@@ -1,0 +1,4 @@
+{
+  "column" : "email",
+  "tokenizer" : "autocomplete"
+}
