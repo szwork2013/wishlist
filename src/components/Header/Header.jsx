@@ -15,7 +15,7 @@ let Header = React.createClass({
         <div className="container-fluid row top-buttons">
           <Menu/>
           <Brand/>
-          <div className="col-xs-4">
+          <div className="col-xs-4 ">
             <WishlistButton/>
             <GoToCart/>
           </div>

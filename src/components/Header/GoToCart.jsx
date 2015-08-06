@@ -8,11 +8,9 @@ let GoToCart = React.createClass({
 
   render() {
     return (
-      <div className="col-xs-4">
         <button type="button"
-        className=" buttons glyphicon glyphicon-shopping-cart btn btn-default col-xs-5 buttom equalButton"
+        className=" buttons glyphicon glyphicon-shopping-cart btn btn-default buttom"
         onClick={this.handleClick}></button>
-      </div>
     );
   }
 });
