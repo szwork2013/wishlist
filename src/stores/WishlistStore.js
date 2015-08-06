@@ -31,7 +31,7 @@ class WishlistStore {
   handleDisplayPopover(){
     this.popoverBeenDisplayed = true;
   }
-  onSearchLists(query) {
+  onLoadList(query) {
     this.skus = query.skus;
     console.log(this.query.skus);
   }
