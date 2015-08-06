@@ -7,7 +7,6 @@ import Wishlist from './components/Wishlist';
 import CookieController from './components/CookieController';
 import NavBar from './components/NavBar/NavBar.jsx';
 import Catalog from './components/Catalog/Catalog.jsx';
-import style from 'styles/WishlistPage.less'; // eslint-disable-line
 
 var WishlistApp = React.createClass({
   render: function(){
