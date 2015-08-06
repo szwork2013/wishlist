@@ -1,3 +1,12 @@
+/***** GoToCart.jsx *******/
+/*
+* Descrição: Implementa o botão do carrinho de compras no
+*     Header da página da Wishlist.
+*
+*  Componentes relacionados:
+*     - GoToCart.less: descreve as classes de CSS do componente GoToCart.jsx
+*
+*/
 import React from 'react';
 import style from '../../styles/GoToCart.less'; // eslint-disable-line
 
