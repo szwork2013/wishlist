@@ -2,10 +2,10 @@
   "name": "wishlist",
   "title": "wishlist",
   "description": "",
-  "version": "0.1.0",
+  "version": "0.1.1-beta",
   "vendor": "vtex",
   "dependencies": {
-   "vtex.storefront-react": "0.3.0"
+    "vtex.storefront-react": "0.3.0"
   },
   "schemas": {
     "storefront": 1
