@@ -1,3 +1,14 @@
+/***** NavBar.jsx *******/
+/*
+* Descrição: Componente que implementa a Navigation Bar
+*     na página da Wishlist.
+*
+*  Componentes relacionados:
+*     - Name.jsx: implementa o botão de menu.
+*     - WishlistIcon.jsx: componente da imagem da marca.
+*     - NavBar.less: descreve as classes de CSS usadas no componente NavBar.jsx.
+*
+*/
 import React from 'react';
 
 import Name from './Name.jsx';
