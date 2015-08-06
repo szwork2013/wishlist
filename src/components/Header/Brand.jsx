@@ -1,3 +1,11 @@
+/***** Brand.jsx *******/
+/*
+* Descrição: Componente da imagem da marca no Header da página da Wishlist.
+*
+*  Componentes relacionados:
+*     - Brand.less: descreve as classes de CSS do componente Brand.jsx
+*
+*/
 import React from 'react';
 import style from '../../styles/Brand.less'; // eslint-disable-line
 
