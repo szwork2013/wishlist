@@ -1,3 +1,11 @@
+/***** Name.jsx *******/
+/*
+* Descrição: Componente para o nome da Wishlist na página.
+*
+*  Componentes relacionados:
+*     - Name.less: descreve as classes de CSS usadas no componente Name.jsx.
+*
+*/
 import React from 'react';
 import style from 'styles/NavBar.less'; // eslint-disable-line
 
