@@ -7,7 +7,6 @@ import Buy from './Buy.jsx';
 import 'styles/NavBar.less';
 
 let NavBar = React.createClass({
-
   render() {
     return (
       <div className="NavBar col-sm-12 bottom-bar-wrapper no-padding">
