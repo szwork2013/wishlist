@@ -2,12 +2,6 @@ import React from 'react';
 import WishlistStore from 'stores/WishlistStore';
 import _ from 'underscore';
 
-let EmailVariable = 'mila.oliveira@vtex.com.br'
-let SubjectVariable = 'assunto'
-let CCvariable = 'oi@oi.com.br'
-let BCCvariable = 'oi@oi.com.br'
-let BodyVariable = 'aaaaaaaaaaaaaaa'
-
 let Send = React.createClass({
   getInitialState() { //sempre fazer o getInitialState "separado", nao pode pegar da outra funçao
     return WishlistStore.getState();
@@ -35,12 +29,12 @@ let Send = React.createClass({
     //falta: fazer o componente separado do e-mail pegar a array mail (.mail // Send.mail 
     // Send.funcao(this.mail))
 
-    // var email = "someone@microsoft.com";
+    // let email = "someone@microsoft.com";
     // document.write("<a href = mailto:"+email+">"+lista+"</a>");
     
-    //var email = 'my@email.com';
-    var subject = 'Minha Wishlist';
-    var body = 'Produtos: ' + lista;
+    //let email = 'my@email.com';
+    let subject = 'Minha Wishlist';
+    let body = 'Produtos: ' + lista;
     location.href = 'mailto:' //+ email
       + '?subject=' + encodeURIComponent(subject)
       + '&body=' + encodeURIComponent(body);
