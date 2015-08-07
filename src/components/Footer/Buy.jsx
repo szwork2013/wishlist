@@ -29,7 +29,7 @@ let Buy = React.createClass({
 
   render() {
     return (
-      <div className="col-xs-4 navbar-form navbar-right row container-fluid">
+      <div>
         <button type="button"
         className=" buttons fa fa-cart-arrow-down btn btn-default buttom"
         onClick={this.handleClick}></button>
