@@ -35,6 +35,7 @@
     "react": "^0.13.3",
     "react-router": "^0.13.3",
     "react-tooltip": "^0.3.4",
+    "FortAwesome/Font-Awesome": "*",
     "underscore": "^1.8.3"
   }
 }
