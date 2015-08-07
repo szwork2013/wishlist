@@ -12,8 +12,8 @@ let CallToAction = React.createClass({
 
   checkEmail(e) {
     e.preventDefault();
-    var email = document.getElementById('kek').value;
-    console.log(email);
+    var email = document.getElementById('emailInput').value;
+    console.log($.get('http://api.beta.vtex.com/dreamstore/masterdata/wishlist/_search?email='+email));
   },
 
   render() {
@@ -23,10 +23,10 @@ let CallToAction = React.createClass({
           <p><small>Quer acessar sua Wishlist de qualquer lugar?</small>
           <br/><small><a href="#" className="alert-link">Informe o seu email.</a></small></p>
         </div>
-        <div className="hidden" id="loga">
-          <input className="form-control" id="kek" placeholder="Email"></input>
-          <button className="btn btn-submit">entrar</button>
-        </div>
+        <form className="hidden" id="loga">
+          <input className="form-control" id="emailInput" placeholder="Email"></input>
+          <button className="btn btn-default" onClick={this.checkEmail}>entrar</button>
+        </form>
       </div>
     );
   }
