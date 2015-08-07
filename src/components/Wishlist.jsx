@@ -21,15 +21,14 @@ let Wishlist = React.createClass({
 
   render() {
     return (
-      <ul>
+      <div>
         {this.state.skus.map( (sku, index) => {
-          return (<li key={index}>
-            <WishlistItem sku={sku} popoverBeenDisplayed={this.state.popoverBeenDisplayed} />
-            </li>);
+          return (<div key={index}>
+            <WishlistItem sku={sku} />
+            </div>);
         })}
-      </ul>
+      </div>
     );
   }
 });
-
 export default Wishlist;
