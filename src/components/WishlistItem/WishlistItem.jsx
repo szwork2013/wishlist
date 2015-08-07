@@ -4,14 +4,14 @@ import Picture from './Picture';
 import Price from './Price';
 import AddCart from './AddCart';
 import Description from './Description';
+import style from '../../styles/WishlistItem.less'; // eslint-disable-line
 import WishlistActions from '../../actions/WishlistActions';
 
 let WishlistItem = React.createClass({
 
   render() {
     return (
-      <nav className="wishlistcontent navbar uk-thumbnail">
-        <div className="wishlistlist navbar uk-thumbnail">
+        <div className="wishlistcontent col-xs-12">
           <Picture sku={this.props.sku}/>
           <div className="col-xs-8 description">
             <div>
@@ -23,7 +23,6 @@ let WishlistItem = React.createClass({
             </div>
           </div>
         </div>
-      </nav>
     );
   }
 });
