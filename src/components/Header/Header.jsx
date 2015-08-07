@@ -11,16 +11,16 @@ let Header = React.createClass({
 
   render() {
     return (
-      <nav className="navigation col-xs-12 navbar navbar-default">
-        <div className="container-fluid row top-buttons">
-          <Menu/>
-          <Brand/>
-          <div className="col-xs-4 ">
-            <WishlistButton/>
-            <GoToCart/>
+        <nav className="navigation col-xs-12 navbar navbar-default">
+          <div className="container-fluid row top-buttons">
+            <Menu/>
+            <Brand/>
+            <div className="col-xs-4 ">
+              <WishlistButton/>
+              <GoToCart/>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
     );
   }
 });
