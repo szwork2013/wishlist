@@ -1,6 +1,7 @@
 import React from 'react';
 import _ from 'underscore';
 import WishlistStore from 'stores/WishlistStore';
+import style from '../../styles/Buy.less'; // eslint-disable-line
 
 let Buy = React.createClass({
 
@@ -30,12 +31,10 @@ let Buy = React.createClass({
     return (
       <div className="col-xs-4 navbar-form navbar-right row container-fluid">
         <button type="button"
-         className="btn btn-success"
-         onClick={this.handleClick}>
-          Comprar essa lista
-        </button>
+        className=" buttons fa fa-cart-arrow-down btn btn-default buttom"
+        onClick={this.handleClick}></button>
       </div>
-    );
+      );
   }
 });
 
