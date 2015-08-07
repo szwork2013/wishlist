@@ -1,3 +1,9 @@
 node_modules/
 npm-debug.log
 storefront/assets/**/*WishlistApp*
+.DS_store
+masterdata/.DS_Store
+masterdata/wishlist/.DS_Store
+masterdata/wishlist/models/.DS_Store
+src/.DS_Store
+src/styles/.DS_Store
