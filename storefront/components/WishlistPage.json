@@ -1,6 +1,6 @@
 {
  "route": {
-   "name": "wishlist_hello",
+   "name": "wishlist_main",
    "path": "/wishlist"
  },
  "assets": [
