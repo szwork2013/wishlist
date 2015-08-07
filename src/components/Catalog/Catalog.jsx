@@ -1,5 +1,6 @@
 import React from 'react';
 import SkuItem from './SkuItem';
+import { Link } from 'react-router';
 
 let Catalog = React.createClass({
   getInitialState(){
@@ -17,6 +18,7 @@ let Catalog = React.createClass({
     return (
       <nav className="col-xs-12 navbar navbar-default">
         <div className="container-fluid row center-block">
+        <Link to="wishlist_main">Ir para wishlist</Link>
         <h1>Catalogo Fake</h1>
           <div className="center">
             {this.state.skus.map((sku, index) => {
