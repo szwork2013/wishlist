@@ -7,7 +7,9 @@ let Picture = React.createClass({
     return (
         <div className="col-xs-4 photocontainer">
           <div className="wishlistphoto">
-            <img src="http://i717.photobucket.com/albums/ww172/louisearaujo/23cheerful-cat.jpg" className="img-thumbnail"/>
+            <img className="img-thumbnail">
+              <p>{this.props.sku.picture}</p>
+            </img>
           </div>
         </div>
     );
