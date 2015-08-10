@@ -9,7 +9,7 @@ import NavBar from './components/NavBar/NavBar.jsx';
 import Catalog from './components/Catalog/Catalog.jsx';
 
 var WishlistApp = React.createClass({
-  render(){
+  render() {
     return (
       <div>
         <meta charset="utf-8"/>

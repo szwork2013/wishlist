@@ -13,7 +13,7 @@ let Catalog = React.createClass({
       ]
     };
   },
-  render(){
+  render() {
     return (
       <nav className="col-xs-12 navbar navbar-default">
         <div className="container-fluid row center-block">
