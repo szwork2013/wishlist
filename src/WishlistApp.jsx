@@ -1,4 +1,3 @@
-import storefront from 'storefront';
 import React from 'react';
 
 import Header from './components/Header/Header.jsx';
@@ -29,7 +28,11 @@ var WishlistApp = React.createClass({
   }
 });
 
-storefront.export('WishlistPage@vtex.wishlist', WishlistApp);
+let component = {
+  name: 'WishlistPage@vtex.wishlist',
+  constructor: WishlistApp
+};
+window.storefront.sdk.dispatcher.actions.ComponentActions.register(component);
 
 // Enable react hot loading with external React
 // see https://github.com/gaearon/react-hot-loader/tree/master/docs#usage-with-external-react
