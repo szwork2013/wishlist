@@ -1,4 +1,5 @@
 import React from 'react';
+import { dispatcher } from 'sdk';
 
 import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
@@ -32,7 +33,7 @@ let component = {
   name: 'WishlistPage@vtex.wishlist',
   constructor: WishlistApp
 };
-window.storefront.sdk.dispatcher.actions.ComponentActions.register(component);
+dispatcher.actions.ComponentActions.register(component);
 
 // Enable react hot loading with external React
 // see https://github.com/gaearon/react-hot-loader/tree/master/docs#usage-with-external-react
