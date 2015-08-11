@@ -6,7 +6,7 @@ import style from 'styles/NavBar.less'; // eslint-disable-line
 
 let NavBar = React.createClass({
 
-  render: function(){
+  render() {
     return (
       <div className=" bottom-bar wishlistnav">
           <Name/>

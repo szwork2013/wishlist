@@ -8,7 +8,7 @@ import Description from './Description';
 
 let WishlistItem = React.createClass({
 
-  render: function() {
+  render() {
     return (
       <nav className="wishlistcontent col-xs-12 navbar uk-thumbnail">
         <div className="wishlistlist navbar uk-thumbnail">

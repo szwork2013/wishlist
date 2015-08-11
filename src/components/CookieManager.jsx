@@ -3,7 +3,7 @@ import cookie from 'react-cookie';
 import WishlistStore from '../stores/WishlistStore';
 import WishlistActions from '../actions/WishlistActions';
 
-let CookieController = React.createClass({
+let CookieManager = React.createClass({
 
   getInitialState() {
     return WishlistStore.getState();
@@ -36,4 +36,4 @@ let CookieController = React.createClass({
     );
   }
 });
-export default CookieController;
+export default CookieManager;
