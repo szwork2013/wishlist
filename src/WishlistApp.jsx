@@ -1,4 +1,3 @@
-import React from 'react';
 import { dispatcher } from 'sdk';
 
 import WishlistMain from './WishlistMain';
