@@ -1,6 +1,7 @@
 import React from 'react';
 import SkuItem from './SkuItem';
 import { Link } from 'react-router';
+import CookieManager from '../CookieManager';
 
 let Catalog = React.createClass({
   getInitialState(){
@@ -16,6 +17,7 @@ let Catalog = React.createClass({
   },
   render() {
     return (
+      <CookieManager>
       <nav className="col-xs-12 navbar navbar-default">
         <div className="container-fluid row center-block">
         <Link to="wishlist_main">Ir para wishlist</Link>
@@ -27,6 +29,7 @@ let Catalog = React.createClass({
           </div>
         </div>
       </nav>
+      </CookieManager>
     );
   }
 });

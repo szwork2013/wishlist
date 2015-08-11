@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import Wishlist from './components/Wishlist';
-import CookieController from './components/CookieController';
+import CookieManager from './components/CookieManager';
 import NavBar from './components/NavBar/NavBar.jsx';
 
 var WishlistMain = React.createClass({
@@ -12,7 +12,7 @@ var WishlistMain = React.createClass({
       <div>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width user-scalable=no"/>
-        <CookieController>
+        <CookieManager>
           <Header/>
           <NavBar/>
           <div className="top-bar">
@@ -20,7 +20,7 @@ var WishlistMain = React.createClass({
           </div>
           <Wishlist/>
           <Footer/>
-        </CookieController>
+        </CookieManager>
       </div>
     );
   }

@@ -4,11 +4,11 @@ import { dispatcher } from 'sdk';
 import WishlistMain from './WishlistMain';
 import Catalog from './components/Catalog/Catalog';
 
-let wishlistapp = {
+let wishlistmain = {
   name: 'WishlistPage@vtex.wishlist',
-  constructor: WishlistApp
+  constructor: WishlistMain
 };
-dispatcher.actions.ComponentActions.register(wishlistapp);
+dispatcher.actions.ComponentActions.register(wishlistmain);
 
 let catalog = {
   name: 'CatalogPage@vtex.wishlist',
