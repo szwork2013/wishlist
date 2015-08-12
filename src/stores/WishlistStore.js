@@ -24,7 +24,6 @@ class WishlistStore {
   }
 
   handleRemoveSku(sku) {
-    //console.log(sku);
     this.skus.splice(this.skus.indexOf(sku), 1);
   }
 }

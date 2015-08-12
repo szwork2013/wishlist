@@ -3,6 +3,7 @@ import style from '../../styles/AddCart.less'; // eslint-disable-line
 import WishlistActions from '../../actions/WishlistActions';
 
 
+
 let Delete = React.createClass({
 
   removeSkuFromWishlist() {
