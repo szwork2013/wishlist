@@ -1,3 +1,12 @@
+/***** AddCart.jsx *******/
+/*
+* Descrição: Componente que implementa o botão de Adicionar SKU ao
+*     carrinho na página da Wishlist.
+*
+*  Componentes relacionados:
+*     - AddCart.less: descreve as classes de CSS usadas no componente AddCart.jsx.
+*
+*/
 import React from 'react';
 import style from '../../styles/AddCart.less'; // eslint-disable-line
 
