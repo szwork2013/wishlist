@@ -4,7 +4,7 @@ import Picture from './Picture';
 import Price from './Price';
 import AddCart from './AddCart';
 import Description from './Description';
-import style from '../../styles/WishlistItem.less'; // eslint-disable-line
+import '../../styles/WishlistItem.less';
 import WishlistActions from '../../actions/WishlistActions';
 
 let WishlistItem = React.createClass({
@@ -16,12 +16,12 @@ let WishlistItem = React.createClass({
           <div className="col-xs-8 description">
             <div>
               <Description sku={this.props.sku}/>
+              </div>
+              <div>
+                <Price sku={this.props.sku}/>
+                <AddCart sku={this.props.sku}/>
+              </div>
             </div>
-            <div>
-              <Price sku={this.props.sku}/>
-              <AddCart sku={this.props.sku}/>
-            </div>
-          </div>
         </div>
     );
   }

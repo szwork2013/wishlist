@@ -1,6 +1,6 @@
 import React from 'react';
 import WishlistStore from 'stores/WishlistStore';
-import style from '../../styles/Send.less'; // eslint-disable-line
+import '../../styles/Send.less';
 
 let Send = React.createClass({
   getInitialState() {

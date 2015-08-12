@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'underscore';
 import WishlistStore from 'stores/WishlistStore';
-import style from '../../styles/Buy.less'; // eslint-disable-line
+import '../../styles/Buy.less';
 
 let Buy = React.createClass({
 

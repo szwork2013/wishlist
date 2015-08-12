@@ -5,13 +5,13 @@ import Brand from './Brand';
 import GoToCart from './GoToCart';
 import WishlistButton from './WishlistButton';
 
-import style from 'styles/Header.less'; // eslint-disable-line
+import 'styles/Header.less';
 
 let Header = React.createClass({
 
   render() {
     return (
-        <nav className="navigation col-xs-12 navbar navbar-default">
+        <nav className="navigation navbar navbar-default">
           <div className="container-fluid row top-buttons">
             <Menu/>
             <Brand/>

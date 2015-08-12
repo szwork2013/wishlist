@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../../styles/Brand.less'; // eslint-disable-line
+import '../../styles/Brand.less';
 
 let Brand = React.createClass({
 

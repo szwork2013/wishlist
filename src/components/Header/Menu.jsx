@@ -1,6 +1,7 @@
 import React from 'react';
-import style from '../../styles/Menu.less'; // eslint-disable-line
+
 import { Navigation } from 'react-router';
+import '../../styles/Menu.less';
 
 let Menu = React.createClass({
   mixins:[Navigation],
@@ -13,7 +14,7 @@ let Menu = React.createClass({
     return (
       <div className="col-xs-4 menu">
         <button
-        className="glyphicon glyphicon-menu-hamburger btn btn-default buttom"
+        className="glyphicon glyphicon-menu-hamburger btn btn-default"
         onClick={this.handleClick}></button>
       </div>
     );

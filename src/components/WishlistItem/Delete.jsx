@@ -12,7 +12,7 @@ let Delete = React.createClass({
     WishlistActions.removeSku(this.props.sku);
   },
 
-  handleClick(e) {
+handleClick(e) {
     if(this.state.clicked === true){
       WishlistActions.displayPopover();
       WishlistActions.removeSku(this.props.sku);
@@ -50,7 +50,7 @@ let Delete = React.createClass({
     }
   },
 
-  render() {
+   render() {
     return (
       <div>
         { this.displayPopover() }
@@ -58,6 +58,6 @@ let Delete = React.createClass({
     );
   }
 
-});
+  });
 
 export default Delete;

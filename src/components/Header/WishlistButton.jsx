@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../../styles/WishlistButton.less'; // eslint-disable-line
+import '../../styles/WishlistButton.less';
 
 let WishlistButton = React.createClass({
   handleClick() {

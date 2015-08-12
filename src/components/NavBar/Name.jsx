@@ -1,12 +1,12 @@
 import React from 'react';
-import style from 'styles/NavBar.less'; // eslint-disable-line
+import 'styles/NavBar.less';
 
 
 let Name = React.createClass({
 
   render() {
     return (
-      <div className="col-xs-5 wishlistname-container">
+      <div className="col-xs-6 wishlistname-container">
         <div className="wishlistname">WISHLIST</div>
         </div>
     );

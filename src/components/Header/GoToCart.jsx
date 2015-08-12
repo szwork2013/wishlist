@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../../styles/GoToCart.less'; // eslint-disable-line
+import '../../styles/GoToCart.less';
 
 let GoToCart = React.createClass({
   handleClick() {
