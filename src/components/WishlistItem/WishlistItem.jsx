@@ -8,10 +8,6 @@ import WishlistActions from '../../actions/WishlistActions';
 
 let WishlistItem = React.createClass({
 
-  removeSkuFromWishlist() {
-    WishlistActions.removeSku(this.props.sku);
-  },
-
 
   render() {
     return (
@@ -24,6 +20,7 @@ let WishlistItem = React.createClass({
             </div>
             <div>
               <Price sku={this.props.sku}/>
+              <Delete sku={this.props.sku}/>
               <AddCart sku={this.props.sku}/>
             </div>
           </div>

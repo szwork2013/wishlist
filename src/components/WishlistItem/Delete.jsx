@@ -15,7 +15,7 @@ let Delete = React.createClass({
         <div className="col-xs-6">
           <div className="col-xs-8"></div>
           <button type="button"
-          className="col-xs-4 right-block btn btn-danger buttons glyphicon glyphicon-remove col-xs-5 buttom"
+          className="right-block btn btn-danger buttons glyphicon glyphicon-remove col-xs-5 buttom"
           onClick={this.removeSkuFromWishlist}>
           </button>
         </div>
