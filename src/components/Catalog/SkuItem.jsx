@@ -9,13 +9,18 @@ let SkuItem = React.createClass({
   render() {
     return (
       <div className="col-xs-12 navbar-form">
-        <p>{this.props.sku.description}</p>
-        <p>Categoria: {this.props.sku.category}</p>
-        <p>R$ {this.props.sku.price}</p>
-        <button
-          className="glyphicon glyphicon-heart btn btn-default"
-          onClick={this.addSkuToWishlist}>
-        </button>
+        <div className="col-xs-6">
+          <img src={this.props.sku.image} />
+        </div>
+        <div className="col-xs-6">
+          <p>{this.props.sku.description}</p>
+          <p>R$ {this.props.sku.price}</p>
+          <button
+            className="glyphicon glyphicon-heart-empty btn btn-default"
+            onClick={this.addSkuToWishlist}>
+          </button>
+          <button className="glyphicon glyphicon-shopping-cart btn btn-default" ></button>
+        </div>
       </div>
     );
   }
