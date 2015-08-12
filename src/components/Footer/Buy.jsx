@@ -1,5 +1,4 @@
 import React from 'react';
-//import cookie from 'react-cookie';
 import _ from 'underscore';
 import WishlistStore from 'stores/WishlistStore';
 
@@ -22,23 +21,9 @@ let Buy = React.createClass({
   },
 
   handleClick() {
-
-    // por jQuery:
-    // let cart = jQuery.grep(cookie.load('wishlist'), function( id ) {
-    //   return id;
-    // });
-
-    // cookie.load('wishlist');
-    //console.log(this.state.skus);
     let cart = _.pluck(this.state.skus, 'id');
-
-    // ler por cookie caso seja necessario/mudem de ideia:
-    //let cart2 = _.pluck(cookie.load('wishlist').skus, 'id');
-
-    // let cart2 = a.skus.map(item => item.id);
-    // console.log('Map', cart2);
     console.log('IDs:', cart);
-    console.log('Lista comprada com sucessooooooooo'); //a ser mudado quando tiver um carrinho
+    console.log('Lista comprada com sucesso'); //a ser mudado quando tiver um carrinho
   },
 
   render() {
