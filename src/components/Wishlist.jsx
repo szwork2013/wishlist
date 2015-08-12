@@ -21,7 +21,7 @@ let Wishlist = React.createClass({
 
   render() {
     return (
-      <div>
+      <div className="wishlist_inner">
         {this.state.skus.map( (sku, index) => {
           return (<div key={index}>
             <WishlistItem sku={sku} />
