@@ -8,7 +8,7 @@ let SkuItem = React.createClass({
 
   render() {
     return (
-      <div className="col-xs-1 navbar-form">
+      <div className="col-xs-12 navbar-form">
         <p>{this.props.sku.description}</p>
         <p>Categoria: {this.props.sku.category}</p>
         <p>R$ {this.props.sku.price}</p>
