@@ -11,10 +11,9 @@ let NavBar = React.createClass({
     return (
       <div className="bottom-bar wishlistnav col-xs-12">
           <Name/>
-          <div className="col-xs-12">
+          <div className="wishlistnav_buttons">
             <div className= "col-xs-2 button-left"><Send/></div>
             <div className= "col-xs-2 button-left"><Buy/></div>
-            <div className= "col-xs-2 button-left"><Remove/></div>
           </div>
       </div>
     );
