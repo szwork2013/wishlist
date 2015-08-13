@@ -20,7 +20,7 @@ let WishlistItem = React.createClass({
             </div>
             <div>
               <Price sku={this.props.sku}/>
-              <Delete sku={this.props.sku}/>
+              <Delete sku={this.props.sku} popoverBeenDisplayed={this.props.popoverBeenDisplayed}/>
               <AddCart sku={this.props.sku}/>
             </div>
           </div>

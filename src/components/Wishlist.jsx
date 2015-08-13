@@ -24,7 +24,7 @@ let Wishlist = React.createClass({
       <ul>
         {this.state.skus.map( (sku, index) => {
           return (<li key={index}>
-            <WishlistItem sku={sku} />
+            <WishlistItem sku={sku} popoverBeenDisplayed={this.state.popoverBeenDisplayed} />
             </li>);
         })}
       </ul>

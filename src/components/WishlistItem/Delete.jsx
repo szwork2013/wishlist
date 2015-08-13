@@ -5,20 +5,22 @@ import { Tooltip, ButtonToolbar, OverlayTrigger, Button, Popover } from 'react-b
 
 
 let Delete = React.createClass({
-
-  removeSkuFromWishlist() {
-    WishlistActions.removeSku(this.props.sku);
-    console.log(this.state);
-
-  },
-
   getInitialState() {
     return {clicked: false};
   },
 
+  removeSkuFromWishlist() {
+    WishlistActions.removeSku(this.props.sku);
+    console.log(this.props.popoverBeenDisplayed);
+  },
+
   handleClick(e) {
+    if(this.state.clicked === true){
+      WishlistActions.displayPopover();
+    }
+
     this.setState({clicked: true});
-    console.log(this.state);
+    console.log(this.props.popoverBeenDisplayed);
   },
 
   displayPopover() {
@@ -27,22 +29,24 @@ let Delete = React.createClass({
       da sua wishlist.</Popover>
     );
 
-    if (this.state.clicked === false) {
-      return <div>
-        <OverlayTrigger trigger='click' rootClose placement='right' 
-        overlay={popover}>
-          <Button bsStyle='danger' onClick={this.handleClick}>
-            <i className='glyphicon glyphicon-remove' />
-          </Button>
-        </OverlayTrigger>
-      </div>
-    }
-    else {
-      return <div>
+    if (this.props.popoverBeenDisplayed === false) {
+      return (
+        <div>
+          <OverlayTrigger trigger='click' rootClose placement='right' overlay={popover}>
+            <Button bsStyle='danger' onClick={this.handleClick}>
+              <i className='glyphicon glyphicon-remove' />
+            </Button>
+          </OverlayTrigger>
+        </div>
+      );
+    } else {
+      return (
+        <div>
           <Button bsStyle='danger' onClick={this.removeSkuFromWishlist}>
             <i className='glyphicon glyphicon-remove' />
           </Button>
-      </div>    
+        </div>
+      );
     }
   },
 
