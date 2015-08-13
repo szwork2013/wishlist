@@ -1,4 +1,5 @@
 import flux from '../flux';
+import WishlistFetcher from '../fetchers/WishlistFetcher'
 
 class WishlistActions {
   addSku(sku) {
@@ -13,8 +14,10 @@ class WishlistActions {
   displayPopover() {
     this.dispatch();
   }
-  loadList(list) {
-    this.dispatch(list);
+  searchEmail(email) {
+    WishlistFetcher.fetch(email).then((result)=>{
+      console.log(result);
+    }).catch(()=>{});
   }
 }
 
