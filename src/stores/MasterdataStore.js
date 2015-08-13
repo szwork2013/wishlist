@@ -4,13 +4,15 @@ import WishlistActions from '../actions/WishlistActions';
 class MasterdataStore {
   constructor() {
     this.skus = [];
+    this.ids = [];
 
     this.bindListeners({
-      handleLoadSkus: WishlistActions.LOAD_SKUS
+      handleLoadIds: WishlistActions.LOAD_IDS
     });
   }
 
-  handleLoadSkus(skus) {
+  handleLoadIds(result) {
+    this.ids = result;
   }
 }
 
