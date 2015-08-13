@@ -115,8 +115,7 @@ module.exports = {
     },
     historyApiFallback: true,
     proxy: {
-      '*': 'http://janus-edge.vtex.com.br/',
-      '/load/*': 'http://api.beta.vtex.com/dreamstore/masterdata/wishlist/'
+      '*': 'http://janus-edge.vtex.com.br/'
     }
   }
 };
