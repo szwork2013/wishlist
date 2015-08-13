@@ -1,39 +1,19 @@
-import React from 'react';
 import { dispatcher } from 'sdk';
 
-import Header from './components/Header/Header.jsx';
-import Footer from './components/Footer/Footer.jsx';
-import Wishlist from './components/Wishlist';
-import CookieManager from './components/CookieManager';
-import NavBar from './components/NavBar/NavBar.jsx';
-import Catalog from './components/Catalog/Catalog.jsx';
+import WishlistMain from './WishlistMain';
+import Catalog from './components/Catalog/Catalog';
 
-var WishlistApp = React.createClass({
-  render() {
-    return (
-      <div>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width user-scalable=no"/>
-        <CookieManager>
-          <Header/>
-          <NavBar/>
-          <div className="top-bar">
-            <Footer/>
-          </div>
-          <Wishlist/>
-          <Footer/>
-          <Catalog/>
-        </CookieManager>
-      </div>
-    );
-  }
-});
-
-let component = {
+let wishlistmain = {
   name: 'WishlistPage@vtex.wishlist',
-  constructor: WishlistApp
+  constructor: WishlistMain
 };
-dispatcher.actions.ComponentActions.register(component);
+dispatcher.actions.ComponentActions.register(wishlistmain);
+
+let catalog = {
+  name: 'CatalogPage@vtex.wishlist',
+  constructor: Catalog
+};
+dispatcher.actions.ComponentActions.register(catalog);
 
 // Enable react hot loading with external React
 // see https://github.com/gaearon/react-hot-loader/tree/master/docs#usage-with-external-react
