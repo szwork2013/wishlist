@@ -4,6 +4,11 @@ import { Link } from 'react-router';
 import CookieManager from '../CookieManager';
 import Header from '../Header/Header';
 
+import image1 from '../../images/catalogo.png';
+import image2 from '../../images/catalogo2.png';
+import image3 from '../../images/catalogo3.png';
+import image4 from '../../images/catalogo4.png';
+
 let Catalog = React.createClass({
   getInitialState(){
     return {
@@ -11,34 +16,35 @@ let Catalog = React.createClass({
         {
           id: 1123,
           description: 'blusa open shoulder',
-          image: 'http://placehold.it/110',
+          image: image2,
           price: 49.90
         },
         {
           id: 2123,
           description: 'regata estampada indiana',
-          image: 'http://placehold.it/110',
+          image: image1,
           price: 29.90
         },
         {
           id: 3123,
           description: 'capa em tricô preta',
-          image: 'http://placehold.it/110',
+          image: image3,
           price: 247.90
         },
         {
           id: 4123,
           description: 'regata mullet com estampa',
-          image: 'http://placehold.it/110',
+          image: image4,
           price: 270.0
         }
       ]
     };
   },
+
   render() {
     return (
       <CookieManager>
-      <Header/>
+        <Header/>
         <div className="container-fluid row center-block">
         <Link to="wishlist_main" className="glyphicon glyphicon-heart btn btn-default"></Link> // Move this to header when merge feature/style
           <div className="content col-xs-12">
