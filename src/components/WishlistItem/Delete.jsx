@@ -10,23 +10,16 @@ let Delete = React.createClass({
     WishlistActions.removeSku(this.props.sku);
   },
 
-  // display() {
-  //   $.display.toggle(
-  //     if(recon == 0){
-  //       function(
-            //render();
+  getInitialState() {
+    return {clicked: false};
+  },
+
+  handleClick(e) {
+    this.setState({clicked: true});
+    // this.removeSkuFromWishlist();
+  },
 
 
-  //         recon = 1;
-  //       )
-  //     },
-
-
-  //     function(
-  //       removeSkuFromWishlist();
-  //     )
-  //   );
-  // },
 
   render() {
     const popover = (
@@ -38,7 +31,7 @@ let Delete = React.createClass({
       <div>
         <OverlayTrigger trigger='click' rootClose placement='right' 
         overlay={popover}>
-          <Button bsStyle='danger'>
+          <Button bsStyle='danger' onClick={this.handleClick}>
             <i className='glyphicon glyphicon-remove' />
           </Button>
         </OverlayTrigger>
