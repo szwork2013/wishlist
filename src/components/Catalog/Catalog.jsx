@@ -2,6 +2,7 @@ import React from 'react';
 import SkuItem from './SkuItem';
 import CookieManager from '../CookieManager';
 import Header from '../Header/Header';
+import WishlistStore from '../../stores/WishlistStore';
 
 import image1 from '../../images/catalogo.png';
 import image2 from '../../images/catalogo2.png';
