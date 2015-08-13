@@ -27,7 +27,7 @@ class WishlistStore {
   handleRemoveSku(sku) {
     this.skus.splice(this.skus.indexOf(sku), 1);
   }
-
+  
   handleDisplayPopover(){
     this.popoverBeenDisplayed = true;
   }
