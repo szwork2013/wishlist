@@ -3,7 +3,6 @@ import React from 'react';
 import Name from './Name.jsx';
 import Send from './Send.jsx';
 import Buy from './Buy.jsx';
-import Remove from './Remove.jsx';
 import 'styles/NavBar.less';
 
 let NavBar = React.createClass({
