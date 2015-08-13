@@ -7,8 +7,6 @@ import Description from './Description';
 import WishlistActions from '../../actions/WishlistActions';
 
 let WishlistItem = React.createClass({
-
-
   render() {
     return (
       <nav className="wishlistcontent col-xs-12 navbar uk-thumbnail">
@@ -31,4 +29,3 @@ let WishlistItem = React.createClass({
 });
 
 export default WishlistItem;
-/*<Delete sku={this.props.sku}/>*/

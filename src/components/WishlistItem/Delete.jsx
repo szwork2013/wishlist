@@ -11,16 +11,17 @@ let Delete = React.createClass({
 
   removeSkuFromWishlist() {
     WishlistActions.removeSku(this.props.sku);
-    console.log(this.props.popoverBeenDisplayed);
   },
 
   handleClick(e) {
     if(this.state.clicked === true){
       WishlistActions.displayPopover();
+      WishlistActions.removeSku(this.props.sku);
     }
 
-    this.setState({clicked: true});
-    console.log(this.props.popoverBeenDisplayed);
+    else{
+      this.setState({clicked: true});
+    }
   },
 
   displayPopover() {

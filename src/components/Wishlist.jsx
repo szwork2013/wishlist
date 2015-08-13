@@ -31,4 +31,5 @@ let Wishlist = React.createClass({
     );
   }
 });
+
 export default Wishlist;
