@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'underscore';
+import _ from 'lodash';
 import WishlistStore from 'stores/WishlistStore';
 import '../../styles/Buy.less';
 
@@ -23,6 +23,9 @@ let Buy = React.createClass({
 
   handleClick() {
     let cart = _.pluck(this.state.skus, 'id');
+
+    // let cart2 = a.skus.map(item => item.id);
+    // console.log('Map', cart2);
     console.log('IDs:', cart);
     console.log('Lista comprada com sucesso'); //a ser mudado quando tiver um carrinho
   },

@@ -33,10 +33,9 @@
     "FortAwesome/Font-Awesome": "*",
     "alt": "^0.17.1",
     "jquery": "^2.1.4",
+    "lodash": "^3.10.1",
     "react": "^0.13.3",
     "react-router": "^0.13.3",
-    "react-bootstrap": "^0.24.4",
-    "react-tooltip": "^0.3.4",
-    "underscore": "^1.8.3"
+    "react-tooltip": "^0.3.4"
   }
 }
