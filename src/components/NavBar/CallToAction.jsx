@@ -9,8 +9,8 @@ let CallToAction = React.createClass({
 
   render() {
     return (
-      <div style={{ height: 80}}>
-        <Popover placement='bottom' className='popoverColor popoverPosition'>
+      <div style={{ height: 60}}>
+        <Popover placement='bottom' positionLeft={43} className='popoverColor popoverPosition'>
         Faça <a href="#" className="alert-link" onClick={this.handleClick}>login</a> para lembrarmos de você</Popover>
       </div>
 
