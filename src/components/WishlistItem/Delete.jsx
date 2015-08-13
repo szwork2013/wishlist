@@ -1,7 +1,7 @@
 import React from 'react';
 import style from '../../styles/Delete.less'; // eslint-disable-line
 import WishlistActions from '../../actions/WishlistActions';
-import { Tooltip, ButtonToolbar, OverlayTrigger, Button, Popover } from 'react-bootstrap';
+import { OverlayTrigger, Button, Popover } from 'react-bootstrap';
 
 let Delete = React.createClass({
   getInitialState() {
