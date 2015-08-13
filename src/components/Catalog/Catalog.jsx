@@ -46,7 +46,6 @@ let Catalog = React.createClass({
       <CookieManager>
         <Header/>
         <div className="container-fluid row center-block">
-        <Link to="wishlist_main" className="glyphicon glyphicon-heart btn btn-default"></Link> // Move this to header when merge feature/style
           <div className="content col-xs-12">
             {this.state.skus.map((sku, index) => {
               return (<SkuItem sku={sku} key={index}/>);

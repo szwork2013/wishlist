@@ -1,5 +1,7 @@
 import React from 'react';
 import '../../styles/WishlistButton.less';
+import { Link } from 'react-router';
+
 
 let WishlistButton = React.createClass({
   handleClick() {
@@ -8,8 +10,8 @@ let WishlistButton = React.createClass({
 
   render() {
     return (
-        <div className="glyphicon glyphicon-heart wishlist-icon col-xs-2 center-block centerIcon equalButton"
-        onClick={this.handleClick}></div>
+        <Link to="wishlist_main" className="glyphicon glyphicon-heart wishlist-icon col-xs-2 center-block centerIcon equalButton"
+        onClick={this.handleClick}></Link>
     );
   }
 });
