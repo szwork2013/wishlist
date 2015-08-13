@@ -30,7 +30,7 @@ let CookieManager = React.createClass({
 
   render() {
     return (
-      <div>
+      <div className="CookieManager row">
       { this.props.children }
       </div>
     );

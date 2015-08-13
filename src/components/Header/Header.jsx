@@ -11,8 +11,8 @@ let Header = React.createClass({
 
   render() {
     return (
-        <nav className="navigation navbar navbar-default">
-          <div className="container-fluid row top-buttons">
+        <nav className="Header col-sm-12 navigation navbar navbar-default">
+          <div className="row top-buttons">
             <Menu/>
             <Brand/>
             <div className="col-xs-4 header-icons">

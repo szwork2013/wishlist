@@ -39,7 +39,7 @@ let Wishlist = React.createClass({
 
   render() {
     return (
-      <div>
+      <div className="col-sm-12 no-padding">
        { this.createWishlistComponent() }
       </div>
     );

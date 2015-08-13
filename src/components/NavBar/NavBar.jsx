@@ -10,12 +10,14 @@ let NavBar = React.createClass({
 
   render() {
     return (
-      <div className="bottom-bar wishlistnav col-xs-12">
+      <div className="NavBar col-sm-12 bottom-bar-wrapper no-padding">
           <CallToAction/>
-          <Name/>
-          <div className="wishlistnav_buttons">
-            <div className= "col-xs-2 button-left"><Send/></div>
-            <div className= "col-xs-2 button-left"><Buy/></div>
+          <div className="bottom-bar wishlistnav">
+            <Name/>
+            <div className="wishlistnav_buttons">
+              <div className= "col-xs-2 button-left"><Send/></div>
+              <div className= "col-xs-2 button-left"><Buy/></div>
+            </div>
           </div>
       </div>
     );

@@ -45,7 +45,7 @@ let Catalog = React.createClass({
     return (
       <CookieManager>
         <Header/>
-        <div className="container-fluid row center-block">
+        <div className="container-fluid row center-block hide">
           <div className="content col-xs-12">
             {this.state.skus.map((sku, index) => {
               return (<SkuItem sku={sku} key={index}/>);
