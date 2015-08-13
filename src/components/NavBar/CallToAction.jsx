@@ -9,11 +9,12 @@ let CallToAction = React.createClass({
 
   render() {
     return (
-      <div style={{ height: 60}}>
+    /*  <div style={{ height: 60}}>
         <Popover placement='bottom' positionRight={80} className='popoverColor popoverPosition'>
         Faça <a href="#" className="alert-link" onClick={this.handleClick}>login</a> para lembrarmos de você</Popover>
-      </div>
+      </div> */
 
+      <div className="alert alert-info" role="alert"><small>Quer acessar sua Wishlist de qualquer lugar?<p> Informe o seu email.</p></small></div>
 
     );
   }
