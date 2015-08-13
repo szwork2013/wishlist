@@ -1,8 +1,7 @@
 import React from 'react';
 import style from '../../styles/Delete.less'; // eslint-disable-line
 import WishlistActions from '../../actions/WishlistActions';
-import { Tooltip, ButtonToolbar, OverlayTrigger, Button } from 'react-bootstrap';
-
+import { Tooltip, ButtonToolbar, OverlayTrigger, Button, Popover } from 'react-bootstrap';
 
 
 let Delete = React.createClass({
@@ -11,22 +10,38 @@ let Delete = React.createClass({
     WishlistActions.removeSku(this.props.sku);
   },
 
+  // display() {
+  //   $.display.toggle(
+  //     if(recon == 0){
+  //       function(
+            //render();
+
+
+  //         recon = 1;
+  //       )
+  //     },
+
+
+  //     function(
+  //       removeSkuFromWishlist();
+  //     )
+  //   );
+  // },
 
   render() {
-    const tooltip = (
-      <Tooltip>ATENÇÃO! Ao clicar neste botão, seu produto será deletado.</Tooltip>
+    const popover = (
+      <Popover title='ATENÇÃO!'>  Se você clicar no ícone mais uma vez, o item será removido
+      da sua wishlist.</Popover>
     );
 
     return (
-      <div className="col-xs-6">
-        <div className="col-xs-8"></div>
-
-          <OverlayTrigger placement='right' overlay={tooltip}>
-            <Button bsStyle='danger' onClick={this.removeSkuFromWishlist}>
-              <i className='glyphicon glyphicon-remove' />
-            </Button>
-          </OverlayTrigger>
-
+      <div>
+        <OverlayTrigger trigger='click' rootClose placement='right' 
+        overlay={popover}>
+          <Button bsStyle='danger'>
+            <i className='glyphicon glyphicon-remove' />
+          </Button>
+        </OverlayTrigger>
       </div>
     );
   }
@@ -34,4 +49,20 @@ let Delete = React.createClass({
 
 export default Delete;
 
-  
+  //   const tooltip = (
+  //     <Tooltip>ATENÇÃO! Ao clicar neste botão, seu produto será deletado.</Tooltip>
+  //   );
+
+  //   return (
+  //     <div className="col-xs-6">
+  //       <div className="col-xs-8"></div>
+
+  //         <OverlayTrigger placement='right' overlay={tooltip}>
+  //           <Button bsStyle='danger' onClick={this.removeSkuFromWishlist}>
+  //             <i className='glyphicon glyphicon-remove' />
+  //           </Button>
+  //         </OverlayTrigger>
+
+  //     </div>
+  //   );
+  // 
