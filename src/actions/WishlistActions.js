@@ -16,8 +16,16 @@ class WishlistActions {
   }
   searchEmail(email) {
     WishlistFetcher.fetch(email).then((result)=>{
-      console.log(result);
-    }).catch(()=>{});
+      if(result.docs.length === 0){
+        console.log('no matching email');
+      }
+      else{
+        console.log(result.docs[0].skus);
+        this.dispatch(result.docs[0].skus);
+      }
+    }).catch(()=>{
+        console.log('could not access api');
+      });
   }
 }
 
