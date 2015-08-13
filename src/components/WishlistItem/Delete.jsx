@@ -16,7 +16,9 @@ let Delete = React.createClass({
 
   handleClick(e) {
     this.setState({clicked: true});
-    // this.removeSkuFromWishlist();
+
+    if(this.state == false){
+      this.removeSkuFromWishlist();}
   },
 
 
