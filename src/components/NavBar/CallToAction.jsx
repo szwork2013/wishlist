@@ -1,19 +1,25 @@
 import React from 'react';
-//import { Popover } from 'react-bootstrap';
+import WishlistActions from '../../actions/WishlistActions';
 import 'styles/CallToAction.less';
 
 let CallToAction = React.createClass({
   handleClick(){
       console.log('Abre o modal para login. VETX ID');
   },
+  getInitialState() {
+    return {email: ''};
+  },
   showsAutentication() {
     document.getElementById('loga').className='col-xs-offset-2 form-inline';
   },
-
+  onChange(e) {
+    this.setState(
+      {email:e.target.value}
+    );
+  },
   checkEmail(e) {
     e.preventDefault();
-    var email = document.getElementById('emailInput').value;
-    console.log($.get('http://api.beta.vtex.com/dreamstore/masterdata/wishlist/_search?email='+email));
+    WishlistActions.searchEmail(this.state.email);
   },
 
   render() {
@@ -24,7 +30,7 @@ let CallToAction = React.createClass({
           <br/><small><a href="#" className="alert-link">Informe o seu email.</a></small></p>
         </div>
         <form className="hidden" id="loga">
-          <input className="form-control" id="emailInput" placeholder="Email"></input>
+          <input className="form-control" value={this.state.email} onChange={this.onChange}></input>
           <button className="btn btn-default" onClick={this.checkEmail}>entrar</button>
         </form>
       </div>
