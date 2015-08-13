@@ -1,15 +1,19 @@
 import React from 'react';
-
-let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+import { Popover } from 'react-bootstrap';
 
 let CallToAction = React.createClass({
+  handleClick(){
+      console.log('Abre o modal para login. VETX ID');
+  },
+
   render() {
     return (
-      <div>
-        <ReactCSSTransitionGroup transitionName="CallToAction">
-        <img src="https://pbs.twimg.com/profile_images/2599691738/image.jpg" />
-        </ReactCSSTransitionGroup>
+      <div style={{ height: 120}}>
+        <Popover placement='bottom' >
+        Faça <a href="#" className="alert-link" onClick={this.handleClick}>login</a> para lembrarmos de você.</Popover>
       </div>
+
+
     );
   }
 });
