@@ -1,5 +1,6 @@
 import React from 'react';
 import { Popover } from 'react-bootstrap';
+import 'styles/CallToAction.less';
 
 let CallToAction = React.createClass({
   handleClick(){
@@ -8,9 +9,9 @@ let CallToAction = React.createClass({
 
   render() {
     return (
-      <div style={{ height: 120}}>
-        <Popover placement='bottom' >
-        Faça <a href="#" className="alert-link" onClick={this.handleClick}>login</a> para lembrarmos de você.</Popover>
+      <div style={{ height: 80}}>
+        <Popover placement='bottom' className='popoverColor popoverPosition'>
+        Faça <a href="#" className="alert-link" onClick={this.handleClick}>login</a> para lembrarmos de você</Popover>
       </div>
 
 
