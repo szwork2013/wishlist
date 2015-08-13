@@ -61,21 +61,3 @@ let Delete = React.createClass({
 });
 
 export default Delete;
-
-  //   const tooltip = (
-  //     <Tooltip>ATENÇÃO! Ao clicar neste botão, seu produto será deletado.</Tooltip>
-  //   );
-
-  //   return (
-  //     <div className="col-xs-6">
-  //       <div className="col-xs-8"></div>
-
-  //         <OverlayTrigger placement='right' overlay={tooltip}>
-  //           <Button bsStyle='danger' onClick={this.removeSkuFromWishlist}>
-  //             <i className='glyphicon glyphicon-remove' />
-  //           </Button>
-  //         </OverlayTrigger>
-
-  //     </div>
-  //   );
-  // 
