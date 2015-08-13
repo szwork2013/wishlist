@@ -8,6 +8,8 @@ let Delete = React.createClass({
 
   removeSkuFromWishlist() {
     WishlistActions.removeSku(this.props.sku);
+    console.log(this.state);
+
   },
 
   getInitialState() {
@@ -16,20 +18,17 @@ let Delete = React.createClass({
 
   handleClick(e) {
     this.setState({clicked: true});
-    if(this.state = false)
-      this.removeSkuFromWishlist();
+    console.log(this.state);
   },
 
-
-
-  render() {
+  displayPopover() {
     const popover = (
       <Popover title='ATENÇÃO!'>  Se você clicar no ícone mais uma vez, o item será removido
       da sua wishlist.</Popover>
     );
 
-    return (
-      <div>
+    if (this.state.clicked === false) {
+      return <div>
         <OverlayTrigger trigger='click' rootClose placement='right' 
         overlay={popover}>
           <Button bsStyle='danger' onClick={this.handleClick}>
@@ -37,8 +36,25 @@ let Delete = React.createClass({
           </Button>
         </OverlayTrigger>
       </div>
+    }
+    else {
+      return <div>
+          <Button bsStyle='danger' onClick={this.removeSkuFromWishlist}>
+            <i className='glyphicon glyphicon-remove' />
+          </Button>
+      </div>    
+    }
+  },
+
+
+  render() {
+    return (
+      <div>
+        { this.displayPopover() }
+      </div>
     );
   }
+
 });
 
 export default Delete;
