@@ -1,5 +1,6 @@
 import React from 'react';
 import WishlistActions from 'actions/WishlistActions';
+import 'styles/NavBar.less';
 
 let SkuItem = React.createClass({
   addSkuToWishlist() {
