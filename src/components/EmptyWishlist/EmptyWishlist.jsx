@@ -6,8 +6,9 @@ let EmptyWishlist = React.createClass({
 
   render() {
     return (
-      <div className="bottom-bar wishlistnav col-xs-12">
-        Não há produtos na sua lista
+      <div className="bottom-bar wishlistnav col-xs-12 emptypage">
+        Você ainda não possui nenhum item na sua wishlist.
+        <a href="/wishlist/catalog">Consulte alguns produtos no nosso catálogo.</a>
       </div>
     );
   }
