@@ -26,7 +26,7 @@ class WishlistStore {
   }
 
   handleRemoveSku(sku) {
-    this.skus.splice(this.skus.indexOf(sku), 1);
+    this.skus = this.skus.filter(stateSku => stateSku.id !== sku.id);
   }
 
   handleDisplayPopover(){
