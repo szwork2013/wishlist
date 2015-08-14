@@ -13,7 +13,6 @@ class CatalogActions {
           console.log('no matching email');
         }
         else {
-          console.log(result.docs[0].skus);
           this.actions.convertToSkus(result.docs[0].skus);
         }
       }).catch(() => {
