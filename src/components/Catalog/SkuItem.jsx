@@ -1,6 +1,9 @@
 import React from 'react';
+
 import WishlistActions from 'actions/WishlistActions';
 import 'styles/NavBar.less';
+import WishlistActions from '../../actions/WishlistActions';
+import WishlistStore from '../../stores/WishlistStore';
 
 
 let SkuItem = React.createClass({
@@ -14,19 +17,25 @@ let SkuItem = React.createClass({
   },
 
   getInitialState() {
-    while(_.has(this.skus, 'id') !== undefined) {
-      if(_.has(this.skus, 'id') === true){
-        return {wished: true};
-      } else {
-        return {wished: false};
-      }
-    }
+    return WishlistStore.getState();
   },
 
-  handleClick(e) {
-    this.setState({wished: !this.state.wished});
-    console.log(!this.state.wished);
-    if(this.state.wished === false) {
+  componentDidMount() {
+    WishlistStore.listen(this.onChange);
+  },
+
+  componentWillUnmount() {
+    WishlistStore.unlisten(this.onChange);
+  },
+
+  onChange(state) {
+    this.setState(state);
+  },
+
+  handleClick() {
+    // this.setState({wished: !this.state.wished});
+    // console.log(!this.state.wished);
+    if(this.state.skus.filter(sku => sku.id === this.props.sku.id).length === 0) {
       this.addSkuToWishlist();
     } else {
       this.removeSkuFromWishlist();
@@ -34,7 +43,7 @@ let SkuItem = React.createClass({
   },
 
   heartButton() {
-    if(this.state.wished === false) {
+    if(this.state.skus.filter(sku => sku.id === this.props.sku.id).length === 0) {
       return (
         <div>
           <button
@@ -53,15 +62,6 @@ let SkuItem = React.createClass({
         </div>
       );
     }
-
-    return (
-        <div>
-          <button
-            className="glyphicon glyphicon-heart btn btn-default"
-            onClick={this.handleClick}>
-          </button>
-        </div>
-      );
   },
 
   render() {
