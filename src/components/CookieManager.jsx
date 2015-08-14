@@ -15,7 +15,7 @@ let CookieManager = React.createClass({
     let wishlist = cookie.load('wishlist');
 
     if (wishlist) {
-      WishlistActions.addList(wishlist.skus);
+      WishlistActions.retrieveSkus(wishlist.skus);
     }
   },
 
