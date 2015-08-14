@@ -3,6 +3,7 @@ import WishlistActions from 'actions/WishlistActions';
 import 'styles/NavBar.less';
 
 let SkuItem = React.createClass({
+
   addSkuToWishlist() {
     WishlistActions.addSku(this.props.sku);
   },
@@ -10,12 +11,35 @@ let SkuItem = React.createClass({
   getInitialState() {
     return {wished: false};
   },
+
   handleClick(e) {
     this.setState({wished: !this.state.wished});
+    console.log(!this.state.wished);
+    this.addSkuToWishlist();
   },
 
-  wishButton () {
-    //button will be located here now
+  heartButton() {
+    if(this.state.wished === false) {
+    return (
+      <div>
+        <button
+          className="glyphicon glyphicon-heart-empty btn btn-default"
+          onClick={this.handleClick}>
+        </button>
+      </div>
+    );
+  }
+  else {
+    return (
+      <div>
+        <button
+          className="glyphicon glyphicon-heart btn btn-default"
+          onClick={this.handleClick}>
+        </button>
+      </div>
+    );
+  }
+
   },
 
   render() {
@@ -27,7 +51,7 @@ let SkuItem = React.createClass({
         <div className="col-xs-6">
           <p>{this.props.sku.description}</p>
           <p>R$ {this.props.sku.price}</p>
-          { this.wishButton }
+          { this.heartButton() }
           <button className="glyphicon glyphicon-shopping-cart btn btn-default" ></button>
         </div>
       </div>
