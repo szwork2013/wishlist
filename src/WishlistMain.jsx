@@ -7,7 +7,7 @@ import CookieManager from './components/CookieManager';
 import NavBar from './components/NavBar/NavBar.jsx';
 
 var WishlistMain = React.createClass({
-  render: function(){
+  render() {
     return (
       <div>
         <meta charset="utf-8"/>
