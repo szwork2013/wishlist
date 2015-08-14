@@ -7,6 +7,13 @@ let SkuItem = React.createClass({
     WishlistActions.addSku(this.props.sku);
   },
 
+  getInitialState() {
+    return {wished: false};
+  },
+  handleClick(e) {
+    this.setState({wished: !this.state.wished});
+  },
+
   render() {
     return (
       <div className="col-xs-12 navbar-form">
