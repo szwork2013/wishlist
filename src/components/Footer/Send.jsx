@@ -2,7 +2,7 @@ import React from 'react';
 import WishlistStore from 'stores/WishlistStore';
 
 let Send = React.createClass({
-  getInitialState() { //sempre fazer o getInitialState "separado", nao pode pegar da outra funçao
+  getInitialState() {
     return WishlistStore.getState();
   },
 
@@ -24,9 +24,6 @@ let Send = React.createClass({
 
     console.log('Lista:', mail);
     console.log('IDs armazenados com sucesso.');
-
-    // let email = "caso seja necessario definir um email, escrever aqui";
-    // document.write("<a href = mailto:"+email+">"+lista+"</a>"); --> metodo possivelmente util eventualmente
     
     let subject = 'Minha Wishlist';
     let body = 'Produtos: ' + lista;
