@@ -14,9 +14,9 @@ let NavBar = React.createClass({
           <CallToAction/>
           <div className="bottom-bar wishlistnav">
             <Name/>
-            <div className="wishlistnav_buttons">
-              <div className= "col-xs-2 button-left"><Send/></div>
-              <div className= "col-xs-2 button-left"><Buy/></div>
+            <div className="wishlistnav_buttons btn-group pull-right">
+              <Buy/>
+              <Send/>
             </div>
           </div>
       </div>
