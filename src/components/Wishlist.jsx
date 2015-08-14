@@ -24,6 +24,9 @@ let Wishlist = React.createClass({
   onChange(state) {
     this.setState(state);
   },
+  onCatalogChange(state) {
+    //WishlistActions.retrieveSkus(state.wishlistSkus);
+  },
 
   createWishlistComponent() {
     if (this.state.skus.length==0) {

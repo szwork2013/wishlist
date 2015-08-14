@@ -49,6 +49,7 @@ class CatalogStore {
       })
     });
     this.wishlistSkus = array;
+    console.log(array);
   }
 
 }
