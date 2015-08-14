@@ -9,7 +9,7 @@ import 'styles/WishlistApp.less';
 var WishlistMain = React.createClass({
   render() {
     return (
-      <div className="WishlistPage-container">
+      <div className="WishlistPage-container main-container">
         <CookieManager>
           <Header/>
           <NavBar/>
