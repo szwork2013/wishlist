@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../../styles/GoToCart.less'; // eslint-disable-line
+import '../../styles/GoToCart.less';
 
 let GoToCart = React.createClass({
   handleClick() {
@@ -8,11 +8,9 @@ let GoToCart = React.createClass({
 
   render() {
     return (
-      <div className="col-xs-3">
         <button type="button"
-        className="buttons glyphicon glyphicon-shopping-cart btn btn-default col-xs-5 buttom"
+        className=" buttons glyphicon glyphicon-shopping-cart btn btn-default buttom"
         onClick={this.handleClick}></button>
-      </div>
     );
   }
 });

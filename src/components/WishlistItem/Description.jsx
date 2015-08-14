@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../../styles/Description.less'; // eslint-disable-line
+import '../../styles/Description.less';
 
 let Description = React.createClass({
 

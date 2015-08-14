@@ -1,6 +1,9 @@
 import React from 'react';
 import WishlistStore from '../stores/WishlistStore';
 import WishlistItem from '../components/WishlistItem/WishlistItem';
+import EmptyWishlist from '../components/EmptyWishlist/EmptyWishlist';
+
+
 
 let Wishlist = React.createClass({
   getInitialState() {
@@ -19,17 +22,27 @@ let Wishlist = React.createClass({
     this.setState(state);
   },
 
+  createWishlistComponent() {
+    if (this.state.skus.length==0) {
+      return <EmptyWishlist/>;
+    }
+    else {
+      return <div className="wishlist_inner">
+        {this.state.skus.map( (sku, index) => {
+          return (<div key={index}>
+            <WishlistItem sku={sku} />
+            </div>);
+        })}
+      </div>;
+    }
+  },
+
   render() {
     return (
-      <ul>
-        {this.state.skus.map( (sku, index) => {
-          return (<li key={index}>
-            <WishlistItem sku={sku} popoverBeenDisplayed={this.state.popoverBeenDisplayed} />
-            </li>);
-        })}
-      </ul>
+      <div className="col-sm-12 no-padding">
+       { this.createWishlistComponent() }
+      </div>
     );
   }
 });
-
 export default Wishlist;

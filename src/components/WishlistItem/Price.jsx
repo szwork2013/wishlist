@@ -1,4 +1,5 @@
 import React from 'react';
+import 'styles/Price.less';
 
 let Price = React.createClass({
 
