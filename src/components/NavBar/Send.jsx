@@ -40,13 +40,9 @@ let Send = React.createClass({
 
   render() {
     return (
-      <div>
-        <a href="#" onclick="javascript:window.location='mailto:'+this.email+'+'&body='+this.mail">
-          <button type="button"
-          className=" buttons fa fa-paper-plane-o btn btn-default buttom"
-          onClick={this.handleClickMail}></button>
-        </a>
-      </div>
+      <button type="button"
+      className=" buttons fa fa-paper-plane-o btn btn-default buttom"
+      onClick={this.handleClickMail} onclick="javascript:window.location='mailto:'+this.email+'+'&body='+this.mail"></button>
     );
   }
 });
