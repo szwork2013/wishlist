@@ -33,18 +33,18 @@ handleClick(e) {
       return (
         <div>
           <OverlayTrigger trigger='click' rootClose placement='right' overlay={popover}>
-            <Button bsStyle='danger' onClick={this.handleClick}>
-              <i className='glyphicon glyphicon-remove' />
-            </Button>
+            <div bsStyle='danger' onClick={this.handleClick}>
+            <i className="glyphicon glyphicon-heart wishlist-icon col-xs-2 center-block centerIcon equalButton"/>
+            </div>
           </OverlayTrigger>
         </div>
       );
     } else {
       return (
         <div>
-          <Button bsStyle='danger' onClick={this.removeSkuFromWishlist}>
-            <i className='glyphicon glyphicon-remove' />
-          </Button>
+          <div onClick={this.removeSkuFromWishlist}>
+            <i className="glyphicon glyphicon-heart wishlist-icon col-xs-2 center-block centerIcon equalButton"/>
+          </div>
         </div>
       );
     }

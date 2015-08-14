@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Picture from './Picture';
+import Delete from './Delete';
 import Price from './Price';
 import AddCart from './AddCart';
 import Description from './Description';
@@ -13,6 +14,7 @@ let WishlistItem = React.createClass({
     return (
         <div className="wishlistcontent col-xs-12">
           <Picture sku={this.props.sku}/>
+          <Delete sku={this.props.sku}/>
           <div className="col-xs-8 description">
             <div>
               <Description sku={this.props.sku}/>
