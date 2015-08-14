@@ -1,5 +1,5 @@
 import React from 'react';
-import { Popover } from 'react-bootstrap';
+//import { Popover } from 'react-bootstrap';
 import 'styles/CallToAction.less';
 
 let CallToAction = React.createClass({

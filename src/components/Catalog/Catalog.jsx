@@ -1,6 +1,5 @@
 import React from 'react';
 import SkuItem from './SkuItem';
-import { Link } from 'react-router';
 import CookieManager from '../CookieManager';
 import Header from '../Header/Header';
 
@@ -45,7 +44,7 @@ let Catalog = React.createClass({
     return (
       <CookieManager>
         <Header/>
-        <div className="container-fluid row center-block hide">
+        <div className="container-fluid row center-block">
           <div className="content col-xs-12">
             {this.state.skus.map((sku, index) => {
               return (<SkuItem sku={sku} key={index}/>);
