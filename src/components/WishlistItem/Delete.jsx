@@ -33,19 +33,17 @@ let Delete = React.createClass({
       return (
         <div>
           <OverlayTrigger trigger='click' rootClose placement='right' overlay={popover}>
-            <div onClick={this.handleClick}>
-            <i className="glyphicon glyphicon-heart wishlist-icon col-xs-2 center-block centerIcon equalButton"/>
-            </div>
+            <button className="btn btn-sm v-remove-btn" onClick={this.handleClick}>
+              <i className="glyphicon glyphicon-remove wishlist-icon"/>
+            </button>
           </OverlayTrigger>
         </div>
       );
     } else {
       return (
-        <div>
-          <div onClick={this.removeSkuFromWishlist}>
-            <i className="glyphicon glyphicon-heart wishlist-icon col-xs-2 center-block centerIcon equalButton"/>
-          </div>
-        </div>
+        <button className="btn btn-link btn-sm v-remove-btn" onClick={this.removeSkuFromWishlist}>
+          <i className="glyphicon glyphicon-remove wishlist-icon"/>
+        </button>
       );
     }
   },
