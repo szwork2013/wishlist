@@ -1,5 +1,5 @@
 import React from 'react';
-import WishlistActions from '../../actions/WishlistActions';
+import CatalogActions from '../../actions/CatalogActions';
 import 'styles/CallToAction.less';
 
 let CallToAction = React.createClass({

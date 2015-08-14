@@ -1,9 +1,9 @@
 import flux from '../flux';
 import CatalogActions from '../actions/CatalogActions';
-import image1 from '../../images/catalogo.png';
-import image2 from '../../images/catalogo2.png';
-import image3 from '../../images/catalogo3.png';
-import image4 from '../../images/catalogo4.png';
+import image1 from '../images/catalogo.png';
+import image2 from '../images/catalogo2.png';
+import image3 from '../images/catalogo3.png';
+import image4 from '../images/catalogo4.png';
 
 class CatalogStore {
   constructor() {

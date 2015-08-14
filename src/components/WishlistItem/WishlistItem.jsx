@@ -6,7 +6,7 @@ import Price from './Price';
 import AddCart from './AddCart';
 import Description from './Description';
 import '../../styles/WishlistItem.less';
-import WishlistActions from '../../actions/WishlistActions';
+//import WishlistActions from '../../actions/WishlistActions';
 
 let WishlistItem = React.createClass({
 

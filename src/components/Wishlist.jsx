@@ -1,7 +1,7 @@
 import React from 'react';
 import WishlistStore from '../stores/WishlistStore';
 import CatalogStore from '../stores/CatalogStore';
-import WishlistActions from '../actions/WishlistActions';
+//import WishlistActions from '../actions/WishlistActions';
 import WishlistItem from '../components/WishlistItem/WishlistItem';
 import EmptyWishlist from '../components/EmptyWishlist/EmptyWishlist';
 
