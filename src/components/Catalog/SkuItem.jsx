@@ -14,6 +14,10 @@ let SkuItem = React.createClass({
     this.setState({wished: !this.state.wished});
   },
 
+  wishButton () {
+    //button will be located here now
+  },
+
   render() {
     return (
       <div className="col-xs-12 navbar-form">
@@ -23,10 +27,7 @@ let SkuItem = React.createClass({
         <div className="col-xs-6">
           <p>{this.props.sku.description}</p>
           <p>R$ {this.props.sku.price}</p>
-          <button
-            className="glyphicon glyphicon-heart-empty btn btn-default"
-            onClick={this.addSkuToWishlist}>
-          </button>
+          { this.wishButton }
           <button className="glyphicon glyphicon-shopping-cart btn btn-default" ></button>
         </div>
       </div>
