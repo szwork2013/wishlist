@@ -38,8 +38,6 @@ let SkuItem = React.createClass({
         </button>
       </div>
     );
-  }
-
   },
 
   render() {
