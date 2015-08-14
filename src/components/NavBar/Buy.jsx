@@ -29,11 +29,9 @@ let Buy = React.createClass({
 
   render() {
     return (
-      <div>
-        <button type="button"
-        className=" buttons fa fa-cart-arrow-down btn btn-default buttom"
-        onClick={this.handleClick}></button>
-      </div>
+      <button type="button"
+      className=" buttons fa fa-cart-arrow-down btn btn-default buttom"
+      onClick={this.handleClick}></button>
       );
   }
 });
