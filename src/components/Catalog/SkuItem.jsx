@@ -33,8 +33,6 @@ let SkuItem = React.createClass({
   },
 
   handleClick() {
-    // this.setState({wished: !this.state.wished});
-    // console.log(!this.state.wished);
     if(this.state.skus.filter(sku => sku.id === this.props.sku.id).length === 0) {
       this.addSkuToWishlist();
     } else {
