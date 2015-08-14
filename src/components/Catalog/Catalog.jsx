@@ -42,16 +42,18 @@ let Catalog = React.createClass({
 
   render() {
     return (
-      <CookieManager>
-        <Header/>
-        <div className="container-fluid row center-block">
-          <div className="content col-xs-12">
-            {this.state.skus.map((sku, index) => {
-              return (<SkuItem sku={sku} key={index}/>);
-            })}
+      <div className="main-container">
+        <CookieManager>
+          <Header/>
+          <div className="row center-block">
+            <div className="content col-xs-12">
+              {this.state.skus.map((sku, index) => {
+                return (<SkuItem sku={sku} key={index}/>);
+              })}
+            </div>
           </div>
-        </div>
-      </CookieManager>
+        </CookieManager>
+      </div>
     );
   }
 });
