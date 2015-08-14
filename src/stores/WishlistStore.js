@@ -8,9 +8,9 @@ class WishlistStore {
 
     this.bindListeners({
       handleAddSku: WishlistActions.ADD_SKU,
-      handleAddList: WishlistActions.ADD_LIST,
       handleRemoveSku: WishlistActions.REMOVE_SKU,
-      handleDisplayPopover: WishlistActions.DISPLAY_POPOVER
+      handleDisplayPopover: WishlistActions.DISPLAY_POPOVER,
+      handleRetrieveSkus: WishlistActions.RETRIEVE_SKUS
     });
   }
 
@@ -19,21 +19,14 @@ class WishlistStore {
       this.skus.push(sku);
     }
   }
-
-  handleAddList(list) {
-    this.skus = list;
-  }
-
   handleRemoveSku(sku) {
     this.skus.splice(this.skus.indexOf(sku), 1);
   }
-  
   handleDisplayPopover(){
     this.popoverBeenDisplayed = true;
   }
-  onLoadList(query) {
-    this.skus = query.skus;
-    console.log(this.query.skus);
+  handleRetrieveSkus(skus) {
+    this.skus = skus;
   }
 }
 
