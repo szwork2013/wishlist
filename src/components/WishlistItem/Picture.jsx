@@ -6,7 +6,7 @@ let Picture = React.createClass({
     return (
         <div className="col-xs-4 photocontainer">
           <div className="wishlistphoto">
-            <img className="img-thumbnail" src={this.props.sku.image}/>
+            <img className="" src={this.props.sku.image}/>
           </div>
         </div>
     );
