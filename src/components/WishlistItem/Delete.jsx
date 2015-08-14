@@ -1,7 +1,7 @@
 import React from 'react';
 import style from '../../styles/Delete.less'; // eslint-disable-line
 import WishlistActions from '../../actions/WishlistActions';
-import { OverlayTrigger, Button, Popover } from 'react-bootstrap';
+import { OverlayTrigger, Popover } from 'react-bootstrap';
 
 let Delete = React.createClass({
   getInitialState() {
@@ -12,7 +12,7 @@ let Delete = React.createClass({
     WishlistActions.removeSku(this.props.sku);
   },
 
-handleClick(e) {
+  handleClick(e) {
     if(this.state.clicked === true){
       WishlistActions.displayPopover();
       WishlistActions.removeSku(this.props.sku);
@@ -33,7 +33,7 @@ handleClick(e) {
       return (
         <div>
           <OverlayTrigger trigger='click' rootClose placement='right' overlay={popover}>
-            <div bsStyle='danger' onClick={this.handleClick}>
+            <div onClick={this.handleClick}>
             <i className="glyphicon glyphicon-heart wishlist-icon col-xs-2 center-block centerIcon equalButton"/>
             </div>
           </OverlayTrigger>
