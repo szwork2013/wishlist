@@ -14,7 +14,10 @@ let CallToAction = React.createClass({
         Faça <a href="#" className="alert-link" onClick={this.handleClick}>login</a> para lembrarmos de você</Popover>
       </div> */
 
-      <div className="alert alert-info" role="alert"><small>Quer acessar sua Wishlist de qualquer lugar?<p> Informe o seu email.</p></small></div>
+      <div className="alert alert-info" role="alert">
+        <p><small>Quer acessar sua Wishlist de qualquer lugar?</small>
+        <br/><small><a href="#" className="alert-link">Informe o seu email.</a></small></p>
+      </div>
 
     );
   }
